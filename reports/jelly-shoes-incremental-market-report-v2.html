@@ -16,7 +16,8 @@
     .ranking{counter-reset:item;display:grid;gap:10px}.rank-item{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:11px 0}.rank-item:before{counter-increment:item;content:counter(item);width:31px;height:31px;display:grid;place-items:center;background:var(--navy);color:#fff;border-radius:50%;font-size:13px}.rank-item b{font-size:15px}.rank-item span{color:var(--muted);font-size:13px}.rank-item em{font-style:normal;font-size:12px;color:var(--green);font-weight:700}
     .audit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.audit-card{border:1px solid var(--line);border-radius:14px;padding:19px;background:#fff}.audit-card h3{margin:0 0 5px;font-size:18px}.audit-card .intent{font-size:12px;color:var(--muted);min-height:42px}.audit-row{display:grid;grid-template-columns:145px 1fr 58px;gap:9px;align-items:center;margin:10px 0;font-size:12px}.audit-track{height:9px;border-radius:99px;background:#e8edf3;overflow:hidden}.audit-fill{height:100%;border-radius:99px;background:var(--blue)}.audit-fill.conv{background:var(--green)}.audit-fill.gap{background:var(--amber)}.audit-card .finding{margin:13px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:13px;color:#425066}.difficulty{display:inline-block;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800}.difficulty-high{background:#fdecec;color:#963636}.difficulty-mid{background:var(--amber-soft);color:var(--amber)}.gate{display:grid;grid-template-columns:150px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-top:1px solid var(--line)}.gate:first-child{border-top:0}.gate strong{font-size:14px}.gate p{margin:0;color:#536075;font-size:13px}.gate em{font-style:normal;font-size:11px;font-weight:700;border-radius:999px;padding:3px 9px;background:var(--green-soft);color:var(--green);white-space:nowrap}.gate em.watch{background:var(--amber-soft);color:var(--amber)}.evidence-box{border:1px solid #cbd8e8;background:#f7faff;border-radius:12px;padding:17px 19px}.evidence-box b{color:#163d73}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px}.confidence{font-size:11px;color:var(--muted)}
     .toolbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:13px 64px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);box-shadow:0 6px 20px rgba(23,32,51,.06);backdrop-filter:blur(10px)}.toolbar-group{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.toolbar-label{font-size:12px;font-weight:700;color:#3f4d61}.filter-btn,.tool-btn,.inspect-btn,.dialog-close{border:1px solid #cbd5e1;background:#fff;color:#344256;border-radius:999px;padding:7px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}.filter-btn:hover,.tool-btn:hover,.inspect-btn:hover,.dialog-close:hover{border-color:var(--blue);color:var(--blue)}.filter-btn.is-active{background:var(--navy);border-color:var(--navy);color:#fff}.month-select{border:1px solid #cbd5e1;border-radius:8px;background:#fff;color:var(--ink);padding:6px 28px 6px 9px;font:inherit;font-size:12px}.filter-btn:focus-visible,.tool-btn:focus-visible,.inspect-btn:focus-visible,.month-select:focus-visible,.dialog-close:focus-visible{outline:3px solid rgba(37,99,235,.28);outline-offset:2px}.audit-card{transition:border-color .2s,box-shadow .2s,transform .2s}.audit-card.is-selected{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.11);transform:translateY(-2px)}.inspect-btn{margin-top:13px;border-color:#a9bde5;color:#1e55b2}.difficulty-dialog{width:min(720px,calc(100% - 28px));border:0;border-radius:18px;padding:0;box-shadow:0 24px 80px rgba(15,31,53,.28)}.difficulty-dialog::backdrop{background:rgba(15,31,53,.64);backdrop-filter:blur(3px)}.dialog-inner{padding:26px}.dialog-head{display:flex;align-items:start;justify-content:space-between;gap:20px}.dialog-head h3{margin:3px 0 7px;font-size:24px}.dialog-close{font-size:18px;line-height:1;padding:7px 10px}.dialog-copy{color:#46566d;font-size:14px}.dialog-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.dialog-stat{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px}.dialog-stat span{display:block;color:var(--muted);font-size:11px}.dialog-stat b{display:block;font-size:17px;margin-top:2px}.visual-note{border-left:4px solid var(--cyan);padding:10px 14px;background:#eef8fa;color:#34485c;font-size:13px}.decision-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.decision-step{position:relative;border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--soft)}.decision-step:after{content:'→';position:absolute;right:-11px;top:43%;z-index:2;color:var(--blue);font-weight:900}.decision-step:last-child:after{display:none}.decision-step b{display:block;margin-bottom:6px}.decision-step p{margin:0;color:#536075;font-size:12px}.decision-step small{display:block;margin-top:9px;color:var(--blue);font-weight:700}.status-next{background:#e8f0ff;color:#2057b5}.status-pending{background:#f2f4f7;color:#566273}.candidate-row[data-stage]{transition:background .15s}.candidate-row:hover{background:#f8fbff}.ratio-chip{font-variant-numeric:tabular-nums;font-weight:700;color:#173d73}.is-hidden{display:none!important}.curve{transition:border-color .2s,box-shadow .2s}.curve:hover{border-color:#a9bde5;box-shadow:0 8px 22px rgba(23,32,51,.07)}.method{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:48px;padding-top:22px}.method ul{margin:8px 0 0;padding-left:20px}.footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
-    @media(max-width:820px){.hero,main{padding-left:28px;padding-right:28px}.toolbar{position:static;padding-left:28px;padding-right:28px}.hero h1{font-size:30px}.metric-grid{grid-template-columns:repeat(2,1fr)}.curve-grid,.research-grid,.audit-grid,.decision-flow{grid-template-columns:1fr}.decision-step:after{display:none}.cluster-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.gate{grid-template-columns:1fr}.gate em{justify-self:start}}
+    .jump-link{text-decoration:none}.reading-path{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 0}.reading-card{border-radius:12px;padding:16px 18px;background:var(--soft);border:1px solid var(--line)}.reading-card span{display:block;font-size:11px;color:var(--muted);font-weight:700}.reading-card b{display:block;font-size:17px;line-height:1.35;margin:5px 0}.reading-card small{color:#536075}.reading-card.good{background:var(--green-soft);border-color:#cae8d7}.reading-card.next{background:#eef4ff;border-color:#cad9f6}.reading-card.stop{background:var(--amber-soft);border-color:#efd9a9}.candidate-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0}.candidate-table th:nth-child(1),.candidate-table td:nth-child(1){min-width:205px}.candidate-table th:nth-child(2),.candidate-table td:nth-child(2){min-width:150px}.candidate-table tbody tr:nth-child(even){background:#fafbfd}.candidate-table td{padding-top:14px;padding-bottom:14px}.metric-pair{display:grid;gap:2px}.metric-pair span{font-size:11px;color:var(--muted)}.metric-pair b{font-size:13px}.supporting{position:relative}.supporting.is-collapsed>:not(.section-kicker):not(h2):not(.section-toggle){display:none}.section-toggle{border:1px solid #cbd5e1;background:#fff;color:#2f4057;border-radius:9px;padding:8px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;margin-top:-8px}.section-toggle:hover{border-color:var(--blue);color:var(--blue)}.section-toggle:before{content:'＋';margin-right:7px}.supporting:not(.is-collapsed)>.section-toggle:before{content:'－'}.section.supporting{margin-top:26px;padding:18px 20px;border:1px solid var(--line);border-radius:12px}.section.supporting h2{font-size:20px;margin-bottom:12px}.section.supporting .section-kicker{color:var(--muted)}
+    @media(max-width:820px){.hero,main{padding-left:28px;padding-right:28px}.toolbar{position:static;padding-left:28px;padding-right:28px}.hero h1{font-size:30px}.metric-grid{grid-template-columns:repeat(2,1fr)}.curve-grid,.research-grid,.audit-grid,.decision-flow,.reading-path{grid-template-columns:1fr}.decision-step:after{display:none}.cluster-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.gate{grid-template-columns:1fr}.gate em{justify-self:start}.candidate-table thead{display:none}.candidate-table,.candidate-table tbody,.candidate-table tr,.candidate-table td{display:block;width:100%}.candidate-table tr{padding:14px;border-top:1px solid var(--line)}.candidate-table tr:first-child{border-top:0}.candidate-table td{border:0;padding:4px 0;min-width:0!important;text-align:left!important}.candidate-table td:before{content:attr(data-label);display:block;font-size:10px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}.candidate-table td:first-child{font-size:16px;font-weight:700}.candidate-table td:first-child:before{display:none}}
     @media(max-width:520px){.hero,main{padding-left:18px;padding-right:18px}.hero{padding-top:38px}.hero h1{font-size:26px}.metric-grid,.curve-grid{grid-template-columns:1fr}.rank-item{grid-template-columns:36px 1fr}.rank-item em{grid-column:2}.footer{display:block}}
     @media print{body{background:#fff}.report{max-width:none;box-shadow:none}.toolbar,.inspect-btn{display:none!important}.hero{print-color-adjust:exact;-webkit-print-color-adjust:exact}.section{break-inside:avoid}.curve{break-inside:avoid}.table-wrap{overflow:visible}}
   </style>
@@ -27,14 +28,16 @@
     <div class="eyebrow">Amazon US · Incremental Demand Discovery</div>
     <h1>Jelly Shoes 增量市场机会挖掘报告</h1>
     <p>面向 Amazon US 开发人员的出单机会决策页：先验证增量需求，再按“有效同款 → 同款出单能力 → 履约结构 → 流量与需供比加分”逐层作出继续、提交或放弃判断。</p>
-    <div class="meta"><span class="pill">版本 V2.2</span><span class="pill">站点 US</span><span class="pill">13 个增量词全量入池</span><span class="pill">Sif MCP + Amazon首页48位核验 + 站外调研</span><span class="pill">流量数据截至 2026-07-12</span><span class="pill">前台快照 2026-07-27</span></div>
+    <div class="meta"><span class="pill">版本 V2.2 · 阅读优化版</span><span class="pill">站点 US</span><span class="pill">13 个增量词全量入池</span><span class="pill">Sif MCP + Amazon首页48位核验 + 站外调研</span><span class="pill">流量数据截至 2026-07-12</span><span class="pill">前台快照 2026-07-27</span></div>
   </header>
   <nav class="toolbar" aria-label="互动分析工具">
-    <div class="toolbar-group" role="group" aria-label="机会筛选">
-      <span class="toolbar-label">分析视图</span>
-      <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">全部 13 词</button>
-      <button class="filter-btn" type="button" data-filter="audited" aria-pressed="false">已完成同款初筛</button>
-      <button class="filter-btn" type="button" data-filter="pending" aria-pressed="false">待审核有效同款</button>
+    <div class="toolbar-group" aria-label="快速定位">
+      <span class="toolbar-label">快速定位</span>
+      <a class="filter-btn jump-link" href="#summary">结论</a>
+      <a class="filter-btn jump-link" href="#decision-tree">判断规则</a>
+      <a class="filter-btn jump-link" href="#candidates">13词进度</a>
+      <a class="filter-btn jump-link" href="#curves">流量曲线</a>
+      <a class="filter-btn jump-link" href="#research">需求来源</a>
     </div>
     <div class="toolbar-group">
       <label class="toolbar-label" for="month-select">曲线月份</label>
@@ -43,9 +46,14 @@
     </div>
   </nav>
   <main>
-    <section class="section">
+    <section class="section" id="summary">
       <div class="section-kicker">Executive verdict</div><h2>结论：13 个增量词都值得进入第一层审核，但现在还不能直接判定哪个词可以上架</h2>
-      <div class="verdict"><strong>增量需求成立；产品机会仍需穿过同款竞品决策树。</strong> 现有证据确认 10 个词在 2025 年首次出现并于 2026 年放大，另有 3 个词从 2024—2026 连续增长。此前抽出的 5 个词只是已取得 Amazon 首页快照的代表样本，不是按机会高低选出的 Top 5。它们均已出现超过“没有或极少同款”的有效供给，因此下一步必须核验同款竞品的 BSR、上架时间与 FBA/FBM，不能仅凭首页符合数量给出上架结论。</div>
+      <div class="verdict"><strong>增量需求成立，但目前没有任何一个词可以直接得出“上架”结论。</strong> 13 个词全部进入候选池；已有前台样本均发现了有效同款，因此必须继续核验同款的 BSR、上架时间和履约方式。</div>
+      <div class="reading-path" aria-label="三步读懂结论">
+        <article class="reading-card good"><span>01 · 已确认</span><b>13 个增量需求成立</b><small>10个词2025首次出现，3个词连续三年增长。</small></article>
+        <article class="reading-card next"><span>02 · 现在要做</span><b>4个池内词进入竞品验证</b><small>另有9个词先完成Amazon首页有效同款审核。</small></article>
+        <article class="reading-card stop"><span>03 · 暂时不能做</span><b>不能只凭流量或同款数量上架</b><small>必须补齐BSR、上架时间及FBA/FBM。</small></article>
+      </div>
       <div class="metric-grid">
         <div class="metric"><span>增量候选池</span><b>13 个词</b><small>全部进入第一层审核</small></div>
         <div class="metric"><span>已完成同款初筛</span><b>4 + 1 个词</b><small>4个池内词 + 1个观察词</small></div>
@@ -54,7 +62,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="decision-tree">
       <div class="section-kicker">Go / No-Go decision tree</div><h2>上首页与出单机会必须逐层判断，不能压缩成一个单项评分</h2>
       <div class="decision-flow">
         <article class="decision-step"><b>1 · 有效同款</b><p>同时检查关键词语义与图片视觉，确认产品是否真的满足该词对应的需求、场景与设计预期。</p><small>无同款／极少且上架≤1周 → 直接上架</small></article>
@@ -65,31 +73,32 @@
       <p class="chart-note" style="margin-top:16px">执行口径：“有效同款”不是 Amazon 页面显示的 Results 总数，而是关键词、产品形态、主图视觉、需求场景均一致的实际竞品。13 个词必须分别审核；只有在 SERP 重合与买家意图重合得到验证后，才允许合并为同一市场。</p>
     </section>
 
-    <section class="section">
+    <section class="section" id="candidates">
       <div class="section-kicker">All 13 candidates</div><h2>13 个增量词的当前决策节点</h2>
       <p class="lead">下表把“已有数据”和“下一步动作”放在同一行。月均周搜索量来自曲线最后一个已返回月份；它不是月搜索量。宽口径需供比＝月搜索量÷Amazon Results，有效需供比＝月搜索量÷有效同款初筛数。</p>
-      <div class="table-wrap"><table>
-        <thead><tr><th>增量词</th><th>曲线证据</th><th>2026峰值</th><th>最新月均周搜索量</th><th>有效同款初筛</th><th>宽口径需供比</th><th>有效需供比</th><th>当前决策</th></tr></thead>
+      <div class="candidate-tools" role="group" aria-label="候选词筛选"><span class="toolbar-label">只看</span><button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">全部 13 词</button><button class="filter-btn" type="button" data-filter="audited" aria-pressed="false">已完成初筛 · 4</button><button class="filter-btn" type="button" data-filter="pending" aria-pressed="false">待审核 · 9</button></div>
+      <div class="table-wrap"><table class="candidate-table">
+        <thead><tr><th>增量词</th><th>当前决策</th><th>增长证据</th><th>最新月均周搜索量</th><th>有效同款</th><th>需供比</th></tr></thead>
         <tbody>
-          <tr class="candidate-row" data-stage="audited"><td>jelly kitten heels</td><td>2025首次，2026 / 2025峰值 25.4×</td><td class="num">6,015</td><td class="num">3,949</td><td class="num">30 / 48</td><td class="num ratio-chip">34.8</td><td class="num ratio-chip">537</td><td><span class="tag status-next">进入同款竞品验证</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>jelly mules</td><td>2025首次，2026 / 2025峰值 9.7×</td><td class="num">7,651</td><td class="num">3,907</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>jelly fisherman sandals</td><td>2025首次，2026 / 2025峰值 8.9×</td><td class="num">1,303</td><td class="num">831</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>mary jane jelly flats</td><td>2025首次，2026 / 2025峰值 7.7×</td><td class="num">1,237</td><td class="num">821</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="audited"><td>jelly mules for women</td><td>2025首次，2026 / 2025峰值 7.4×</td><td class="num">8,388</td><td class="num">4,421</td><td class="num">27 / 48</td><td class="num ratio-chip">31.9</td><td class="num ratio-chip">637</td><td><span class="tag status-next">进入同款竞品验证</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>brown jelly flats</td><td>2025首次，2026 / 2025峰值 5.9×</td><td class="num">1,257</td><td class="num">523</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>jelly mary janes</td><td>2025首次，2026 / 2025峰值 5.3×</td><td class="num">1,267</td><td class="num">757</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="audited"><td>jelly mary janes for women</td><td>2025首次，2026 / 2025峰值 5.4×</td><td class="num">2,671</td><td class="num">1,987</td><td class="num">25 / 48</td><td class="num ratio-chip">18.3</td><td class="num ratio-chip">412</td><td><span class="tag status-next">进入同款竞品验证</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>jelly slip on shoes women</td><td>2025首次，2026 / 2025峰值 4.8×</td><td class="num">1,050</td><td class="num">810</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>clear jelly flats</td><td>2025首次，2026 / 2025峰值 2.6×</td><td class="num">1,515</td><td class="num">742</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>jelly ballet flats</td><td>2024—2026连续增长</td><td class="num">1,499</td><td class="num">833</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="pending"><td>jelly mesh flats</td><td>2024—2026连续增长</td><td class="num">868</td><td class="num">462</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="tag status-pending">数据不足继续核验</span></td></tr>
-          <tr class="candidate-row" data-stage="audited"><td>jelly ballet flats for women</td><td>2024—2026连续增长</td><td class="num">2,914</td><td class="num">1,588</td><td class="num">31 / 48</td><td class="num ratio-chip">10.2</td><td class="num ratio-chip">206</td><td><span class="tag status-next">进入同款竞品验证</span></td></tr>
+          <tr class="candidate-row" data-stage="audited"><td>jelly kitten heels</td><td data-label="当前决策"><span class="tag status-next">进入竞品验证</span></td><td data-label="增长证据">2025首次 · 25.4×<br><span class="confidence">2026峰值 6,015</span></td><td data-label="最新月均周搜索量" class="num">3,949</td><td data-label="有效同款" class="num">30 / 48</td><td data-label="需供比"><div class="metric-pair"><span>宽口径 / 有效</span><b>34.8 / 537</b></div></td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly mules</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 9.7×<br><span class="confidence">2026峰值 7,651</span></td><td data-label="最新月均周搜索量" class="num">3,907</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly fisherman sandals</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 8.9×<br><span class="confidence">2026峰值 1,303</span></td><td data-label="最新月均周搜索量" class="num">831</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>mary jane jelly flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 7.7×<br><span class="confidence">2026峰值 1,237</span></td><td data-label="最新月均周搜索量" class="num">821</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="audited"><td>jelly mules for women</td><td data-label="当前决策"><span class="tag status-next">进入竞品验证</span></td><td data-label="增长证据">2025首次 · 7.4×<br><span class="confidence">2026峰值 8,388</span></td><td data-label="最新月均周搜索量" class="num">4,421</td><td data-label="有效同款" class="num">27 / 48</td><td data-label="需供比"><div class="metric-pair"><span>宽口径 / 有效</span><b>31.9 / 637</b></div></td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>brown jelly flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 5.9×<br><span class="confidence">2026峰值 1,257</span></td><td data-label="最新月均周搜索量" class="num">523</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly mary janes</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 5.3×<br><span class="confidence">2026峰值 1,267</span></td><td data-label="最新月均周搜索量" class="num">757</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="audited"><td>jelly mary janes for women</td><td data-label="当前决策"><span class="tag status-next">进入竞品验证</span></td><td data-label="增长证据">2025首次 · 5.4×<br><span class="confidence">2026峰值 2,671</span></td><td data-label="最新月均周搜索量" class="num">1,987</td><td data-label="有效同款" class="num">25 / 48</td><td data-label="需供比"><div class="metric-pair"><span>宽口径 / 有效</span><b>18.3 / 412</b></div></td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly slip on shoes women</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 4.8×<br><span class="confidence">2026峰值 1,050</span></td><td data-label="最新月均周搜索量" class="num">810</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>clear jelly flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 2.6×<br><span class="confidence">2026峰值 1,515</span></td><td data-label="最新月均周搜索量" class="num">742</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly ballet flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">连续三年增长<br><span class="confidence">2026峰值 1,499</span></td><td data-label="最新月均周搜索量" class="num">833</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly mesh flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">连续三年增长<br><span class="confidence">2026峰值 868</span></td><td data-label="最新月均周搜索量" class="num">462</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="audited"><td>jelly ballet flats for women</td><td data-label="当前决策"><span class="tag status-next">进入竞品验证</span></td><td data-label="增长证据">连续三年增长<br><span class="confidence">2026峰值 2,914</span></td><td data-label="最新月均周搜索量" class="num">1,588</td><td data-label="有效同款" class="num">31 / 48</td><td data-label="需供比"><div class="metric-pair"><span>宽口径 / 有效</span><b>10.2 / 206</b></div></td></tr>
         </tbody>
       </table></div>
       <div class="evidence-box" style="margin-top:16px"><b>第五个已审核样本：</b><span class="mono">jelly fisherman sandals for women</span> 是 2026 新出现的观察词，不属于上表 13 个曲线确认词；其月搜索量 6,300、Amazon Results 381、有效同款初筛 14 / 48，对应宽口径需供比 16.5、有效需供比 450。它同样只能进入同款竞品验证，不能因有效同款较少直接判定可上架。</div>
     </section>
 
-    <section class="section">
+    <section class="section" id="audit">
       <div class="section-kicker">Effective competitor audit</div><h2>五个前台样本：已完成“有效同款初筛”，尚未完成最终上首页难度判断</h2>
       <div class="audit-grid">
         <article class="audit-card" data-key="mules" data-status="audited">
@@ -161,14 +170,14 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="curves">
       <div class="section-kicker">Monthly YoY curves</div><h2>月度流量同比曲线：同时看增长与季节形状</h2>
       <p class="chart-note">将Sif周度搜索量按月取平均，横轴统一为1—12月，并叠加2024、2025、2026三条曲线。2026数据截至7月12日；没有非零返回值的月份留空，不按真实零需求解释。</p>
       <div class="chart-legend"><span><i class="legend-line" style="border-color:#aab4c3"></i>2024</span><span><i class="legend-line" style="border-color:#0e7490"></i>2025</span><span><i class="legend-line" style="border-color:#2563eb"></i>2026</span></div>
       <div id="curve-grid" class="curve-grid"></div>
     </section>
 
-    <section class="section">
+    <section class="section supporting is-collapsed">
       <div class="section-kicker">Strict matches</div><h2>2025首次小峰，2026显著大峰</h2>
       <div class="table-wrap"><table>
         <thead><tr><th>细分词</th><th>首次出现</th><th>2024峰值</th><th>2025峰值</th><th>2026峰值</th><th>2026 / 2025</th><th>判定</th></tr></thead>
@@ -187,7 +196,7 @@
       </table></div>
     </section>
 
-    <section class="section">
+    <section class="section supporting is-collapsed">
       <div class="section-kicker">Three-year confirmation</div><h2>从2024开始连续三年放大的词</h2>
       <div class="table-wrap"><table>
         <thead><tr><th>细分词</th><th>2024峰值</th><th>2025峰值</th><th>2026峰值</th><th>2025 / 2024</th><th>2026 / 2025</th><th>判断</th></tr></thead>
@@ -199,7 +208,7 @@
       </table></div>
     </section>
 
-    <section class="section">
+    <section class="section supporting is-collapsed">
       <div class="section-kicker">2026 watchlist</div><h2>2026才出现的新需求</h2>
       <p class="lead">这些词缺少“2025小峰”的年度确认，因此不与严格增量词混在一起；它们代表更早期、但证据尚未完整的新信号。</p>
       <div class="table-wrap"><table>
@@ -221,7 +230,7 @@
       </table></div>
     </section>
 
-    <section class="section">
+    <section class="section supporting is-collapsed">
       <div class="section-kicker">Demand clusters</div><h2>增量不是孤立长尾，而是正在形成需求簇</h2>
       <div class="cluster-grid">
         <div class="cluster"><h3>Mules 需求簇</h3><p><b>jelly mules</b>、<b>jelly mules for women</b>、jelly cage mule。前两词2026峰值分别为7,651和8,388，兼具规模与增速。</p></div>
@@ -231,7 +240,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section supporting is-collapsed">
       <div class="section-kicker">False-positive control</div><h2>主动排除的“看起来上涨、但不是新增市场”</h2>
       <div class="table-wrap"><table>
         <thead><tr><th>关键词</th><th>排除原因</th><th>关键数据</th></tr></thead>
@@ -244,7 +253,7 @@
       </table></div>
     </section>
 
-    <section class="section">
+    <section class="section" id="research">
       <div class="section-kicker">Off-site demand research</div><h2>需求从哪里来：场景、人群与外部推动因素</h2>
       <p class="lead">站外资料显示，这轮增长不是传统儿童水鞋需求的简单回归，而是“成人时装化 + 童年/Y2K怀旧 + 夏季透明材质 + 平底鞋与低跟鞋趋势”叠加形成。以下将可核实事实与分析推断分开。</p>
       <div class="timeline">
@@ -261,7 +270,7 @@
       <div class="callout" style="margin-top:18px"><b>因果判断：</b>外部资料可以证明产品发布、秀场曝光、名人穿着与搜索增长在时间上高度吻合，但不能仅凭公开资料证明某一个品牌或名人是唯一原因。报告将其定义为“高可信推动因素”，而不是单一因果归因。</div>
     </section>
 
-    <section class="section">
+    <section class="section supporting is-collapsed">
       <div class="section-kicker">Keyword-level demand map</div><h2>每个已验证细分词对应的真实需求解释</h2>
       <div class="table-wrap"><table>
         <thead><tr><th>细分词</th><th>需求场景</th><th>推定核心人群</th><th>主要外部来源</th></tr></thead>
@@ -369,11 +378,14 @@
   document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
     const filter=button.dataset.filter;
     document.querySelectorAll('[data-filter]').forEach(item=>{const active=item===button;item.classList.toggle('is-active',active);item.setAttribute('aria-pressed',String(active))});
-    document.querySelectorAll('.audit-card[data-status],.curve[data-status],.candidate-row[data-stage]').forEach(item=>{
-      const stage=item.dataset.status||item.dataset.stage;
-      item.classList.toggle('is-hidden',filter!=='all'&&stage!==filter);
-    });
+    document.querySelectorAll('.candidate-row[data-stage]').forEach(item=>item.classList.toggle('is-hidden',filter!=='all'&&item.dataset.stage!==filter));
   }));
+
+  document.querySelectorAll('.supporting').forEach(section=>{
+    const button=document.createElement('button');button.type='button';button.className='section-toggle';
+    const update=()=>{const collapsed=section.classList.contains('is-collapsed');button.textContent=collapsed?'展开详细证据':'收起详细证据';button.setAttribute('aria-expanded',String(!collapsed))};
+    update();section.querySelector('h2').after(button);button.addEventListener('click',()=>{section.classList.toggle('is-collapsed');update()});
+  });
 
   document.getElementById('month-select').addEventListener('change',event=>{
     const month=Number(event.target.value);
