@@ -4,9 +4,11 @@
 
 ## 当前站点
 
-- Jelly Shoes 增量市场机会挖掘报告 V1.1
+- Jelly Shoes 增量市场机会挖掘报告 V2（互动版）
 - 入口：`index.html`
-- 类型：无需构建步骤的静态网站
+- 归档：`reports/jelly-shoes-incremental-market-report-v2.html`
+- 交互：机会筛选、细分词需求—供给结论、月度曲线联动、打印/PDF
+- 类型：无需构建步骤的静态网站，无后端密钥或用户数据
 
 ## 部署
 
