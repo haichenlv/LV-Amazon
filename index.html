@@ -18,7 +18,441 @@
     .toolbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:13px 64px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);box-shadow:0 6px 20px rgba(23,32,51,.06);backdrop-filter:blur(10px)}.toolbar-group{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.toolbar-label{font-size:12px;font-weight:700;color:#3f4d61}.filter-btn,.tool-btn,.inspect-btn,.dialog-close{border:1px solid #cbd5e1;background:#fff;color:#344256;border-radius:999px;padding:7px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}.filter-btn:hover,.tool-btn:hover,.inspect-btn:hover,.dialog-close:hover{border-color:var(--blue);color:var(--blue)}.filter-btn.is-active{background:var(--navy);border-color:var(--navy);color:#fff}.month-select{border:1px solid #cbd5e1;border-radius:8px;background:#fff;color:var(--ink);padding:6px 28px 6px 9px;font:inherit;font-size:12px}.filter-btn:focus-visible,.tool-btn:focus-visible,.inspect-btn:focus-visible,.month-select:focus-visible,.dialog-close:focus-visible{outline:3px solid rgba(37,99,235,.28);outline-offset:2px}.audit-card{transition:border-color .2s,box-shadow .2s,transform .2s}.audit-card.is-selected{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.11);transform:translateY(-2px)}.inspect-btn{margin-top:13px;border-color:#a9bde5;color:#1e55b2}.difficulty-dialog{width:min(720px,calc(100% - 28px));border:0;border-radius:18px;padding:0;box-shadow:0 24px 80px rgba(15,31,53,.28)}.difficulty-dialog::backdrop{background:rgba(15,31,53,.64);backdrop-filter:blur(3px)}.dialog-inner{padding:26px}.dialog-head{display:flex;align-items:start;justify-content:space-between;gap:20px}.dialog-head h3{margin:3px 0 7px;font-size:24px}.dialog-close{font-size:18px;line-height:1;padding:7px 10px}.dialog-copy{color:#46566d;font-size:14px}.dialog-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.dialog-stat{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px}.dialog-stat span{display:block;color:var(--muted);font-size:11px}.dialog-stat b{display:block;font-size:17px;margin-top:2px}.visual-note{border-left:4px solid var(--cyan);padding:10px 14px;background:#eef8fa;color:#34485c;font-size:13px}.decision-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.decision-step{position:relative;border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--soft)}.decision-step:after{content:'→';position:absolute;right:-11px;top:43%;z-index:2;color:var(--blue);font-weight:900}.decision-step:last-child:after{display:none}.decision-step b{display:block;margin-bottom:6px}.decision-step p{margin:0;color:#536075;font-size:12px}.decision-step small{display:block;margin-top:9px;color:var(--blue);font-weight:700}.status-next{background:#e8f0ff;color:#2057b5}.status-pending{background:#f2f4f7;color:#566273}.candidate-row[data-stage]{transition:background .15s}.candidate-row:hover{background:#f8fbff}.ratio-chip{font-variant-numeric:tabular-nums;font-weight:700;color:#173d73}.is-hidden{display:none!important}.curve{transition:border-color .2s,box-shadow .2s}.curve:hover{border-color:#a9bde5;box-shadow:0 8px 22px rgba(23,32,51,.07)}.method{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:48px;padding-top:22px}.method ul{margin:8px 0 0;padding-left:20px}.footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
     .jump-link{text-decoration:none}.reading-path{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 0}.reading-card{border-radius:12px;padding:16px 18px;background:var(--soft);border:1px solid var(--line)}.reading-card span{display:block;font-size:11px;color:var(--muted);font-weight:700}.reading-card b{display:block;font-size:17px;line-height:1.35;margin:5px 0}.reading-card small{color:#536075}.reading-card.good{background:var(--green-soft);border-color:#cae8d7}.reading-card.next{background:#eef4ff;border-color:#cad9f6}.reading-card.stop{background:var(--amber-soft);border-color:#efd9a9}.candidate-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0}.candidate-table th:nth-child(1),.candidate-table td:nth-child(1){min-width:205px}.candidate-table th:nth-child(2),.candidate-table td:nth-child(2){min-width:150px}.candidate-table tbody tr:nth-child(even){background:#fafbfd}.candidate-table td{padding-top:14px;padding-bottom:14px}.metric-pair{display:grid;gap:2px}.metric-pair span{font-size:11px;color:var(--muted)}.metric-pair b{font-size:13px}.validation-grid{display:grid;gap:15px}.validation-card{border:1px solid var(--line);border-radius:14px;padding:19px;background:#fff}.validation-head{display:flex;justify-content:space-between;gap:16px;align-items:start}.validation-head h3{margin:0;font-size:18px}.validation-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.validation-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}.validation-stat{background:var(--soft);border-radius:9px;padding:10px 12px}.validation-stat span{display:block;color:var(--muted);font-size:10px}.validation-stat b{display:block;font-size:14px;margin-top:2px}.variant-table{font-size:12px}.variant-table th,.variant-table td{padding:8px 9px}.decision-note{margin:12px 0 0;padding:11px 13px;border-left:4px solid var(--amber);background:var(--amber-soft);font-size:13px}.status-submit{background:#fff1d6;color:#855000}.changelog{display:grid;gap:0;margin-top:12px}.change-row{display:grid;grid-template-columns:80px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line)}.change-row:first-child{border-top:0}.change-row b{color:var(--blue)}.change-row p{margin:0;color:#536075;font-size:13px}.supporting{position:relative}.supporting.is-collapsed>:not(.section-kicker):not(h2):not(.section-toggle){display:none}.section-toggle{border:1px solid #cbd5e1;background:#fff;color:#2f4057;border-radius:9px;padding:8px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;margin-top:-8px}.section-toggle:hover{border-color:var(--blue);color:var(--blue)}.section-toggle:before{content:'＋';margin-right:7px}.supporting:not(.is-collapsed)>.section-toggle:before{content:'－'}.section.supporting{margin-top:26px;padding:18px 20px;border:1px solid var(--line);border-radius:12px}.section.supporting h2{font-size:20px;margin-bottom:12px}.section.supporting .section-kicker{color:var(--muted)}
     @media(max-width:820px){.hero,main{padding-left:28px;padding-right:28px}.toolbar{position:static;padding-left:28px;padding-right:28px}.hero h1{font-size:30px}.metric-grid{grid-template-columns:repeat(2,1fr)}.curve-grid,.research-grid,.audit-grid,.decision-flow,.reading-path{grid-template-columns:1fr}.validation-stats{grid-template-columns:repeat(2,1fr)}.decision-step:after{display:none}.cluster-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.gate{grid-template-columns:1fr}.gate em{justify-self:start}.candidate-table thead{display:none}.candidate-table,.candidate-table tbody,.candidate-table tr,.candidate-table td{display:block;width:100%}.candidate-table tr{padding:14px;border-top:1px solid var(--line)}.candidate-table tr:first-child{border-top:0}.candidate-table td{border:0;padding:4px 0;min-width:0!important;text-align:left!important}.candidate-table td:before{content:attr(data-label);display:block;font-size:10px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}.candidate-table td:first-child{font-size:16px;font-weight:700}.candidate-table td:first-child:before{display:none}}
-    @media(max-width:520px){.hero,main{padding-left:18px;padding-right:18px}.hero{padding-top:38px}.hero h1{font-size:26px}.metric-grid׾<��$z{-���jם[�n���Z��CK��X	���{�nX�n��ޘ	���Y��i�^8#��Ɠ��Ɠ�kX�x�z��K���ɥ6�b�5�6�FS��&�WE�vWE��W�v�&E�6��WF�F�����6�FS�{�~{��yJ�K����X�eF�>x+�X{�K����X�n��nK��[�n���K�nK��Xh�h��6�nkX�x�4��j~i��[�>h�����in�^K�{��X�nj��8#��Ɠ��Ɠ�X	���k�ɣ>K��i�.{��z��N���XZ��:����XZ^z��K�[.Z�j��ɾj�NX��^K��X��X�j~i��i��[{.X�n[�~[��xZ~y�NK�>��j~i�����K��i��iˮKɥF�^8.X[nK��f�6�W&��v��V�[�K��##n�x.Z��������Y�j�NkXh^[{.Z��h��in�^X��zپy�Ni��NK��8#��Ɠ��Ɠ�in�^K�{���ɣ##b�r�#~Yʄ����U>X�nX��i	�{J#^K��j~i�Ί�����K�^�^��.i��zK�y�N�in�S(	CC�K��K��{��K�X�>[�N�ɾ{�>i��Kɮ���i{n�{N8K��{��8[��Y�K��K��h
-~X�nX��X�n8#��Ɠ��Ɠ�iȞiX�Y�j��Z�K���ɮK�~Y8[�^��Y�i{nk��k>y��j~K��{�N8�V�ǒ�d2�E^�����8h�~Z鮙�Y����[�nYʎY��x�~�xn�x�K��Y8�[�N[{.�>z	Ny�NK�Z�nYˮi��K������(Ni���ɾiʮ�;�z��Ny�NK�~Y8K�ފ�XZ^8#��Ɠ��Ɠ�K�>��Ɨ7F��~�ɮK��X[>�J���z��K��{�>i��K�ޘ�h�����K��K��Y��x�~Y�~z�nY�y��Z���k.y�NiȞiX�Y�j���ɾK��h��K�^iȞkX�x�K�nYXnY8�I��X�y�D4��[�>K��Y�j��8#��Ɠ��Ɠ�j�[�>X��K�>�ɮK��yJ�6�b�5�6�FS��5�vWE�Ɨ7F��u�G&ff�5�7G'V7GW&S��6�FS���X�bƗ7F��r��3ZJ�kX�x�{�>i�N���hȞkX�x�K�ޚ)�X�nX��K�NK��X��K�>�ɾK��K�^K��hH�x�nK�>h�nK��kX�x�X��K�>K�>i��8#��Ɠ��Ɠ�X{�X�^�;�X���ɮK��yJ�6�b�5�6�FS��5�vWE�6���6�W5�Ɨ7C��6�FS�j����K�NK��j�[�>X��K�>��3ZJ��H�x��ɴ6��F���r%5.8FFRf�'7Bf��&�^86��2g&��K��6��B'�i�^�z�##b�r�#r�����nh8^�^[��xZ~8#��Ɠ��Ɠ�[^{�nX�Nij��ɮz��K��ik�X�nZ�nK�B�����Xޘ��K��d$�ɾ��^K�NK��j�[�>X��K�>Y�~K��d$���X����^K�>��Ɨ7F��r��K��d$K��Z��8.K��i�n��nj�^Y�j~K�^���K�NK��j�[�>X��K�>y�BFFRf�'7Bf��&�RK��Xxn8#��Ɠ��Ɠ�Xk>z�nj	�ɮizY�j��h�ni�[	K�NK��i�n(�CY�X��y�Nh�^K��i�n�ɾY
-nX��j����Y�j��6��F���r%5.8K��i�ni{n�{NX��d$�d$�8.h�iȞY�j��%5"fwC�3K�~X��iK�[�>�ɴd$�������i��ikY8X{�X�^X�X�n�ɾK�Td$X{�X�^X��h�K�NX�Nij�8.i�΋��^{�Nj~i��Y�~��XZ^i�Y�K�zx�8#��Ɠ��Ɠ��K�j�N�ɮZ��X�>[�N���iȎi	�{J.�x�;t����&W7V�G>�ɾiȞiX�X�>[�N���iȎi	�{J.�x�;~iȞiX�Y�j��X��zپi[8.j�NX�yJ�K��y��Z��j�N��>���K��i��K�>Y�j��X{�X�^��Ί�8#��Ɠ��Ɠ�F�>��nK��[�n�ɮx+�X{�����X�nK�ޚ)�i�^�z�6�nz��K��[z^X[~�ɾK�ޚ)�K��X����Ni��J�K�K��kX�x�X�niZ>���[�^��K��YXnY8X˞�Xފ�h��{�>Y����K�ވ;�X�^x��z؞Y�K��K�{��z��y��8#��Ɠ��Ɠ�iȎ[�ni�.{���ɮ[nY�K��z�xKniȎXh^y�NY�[�ni	�{J.�x�X�nz�~i��[�>Y�~���X�nX��X�X�##N8##^8##n�ɾ{ˮ[	��n��NY��X�y�NiȎK��yY�z��8.h�^Y�i��z�[nX[nj~��K��(	�iȎY�~Y�i	�{J.�x�(	����K��z؞Y�K��iȎi	�{J.�x�8#��Ɠ��Ɠ�(	Κinj�X{�x�(	��ɥ6�n��NY��y�D$Y�[�ni	�{J.�x�[��X�~K��z��K�j�X{�x���nX�y�N[�NK��8#��Ɠ��Ɠ�(	�[�N[�n[;X�(	��ɮ��^�z�xKn[�NXh^i����K�Y�y�D$i	�{J.�x�8###nK��h���{3##b�r�.y�N[�NXh^i[h��8#��Ɠ��Ɠ�z��ZIn��k.z	Nz�n�ɮ{��Y�zxYˢ�K�~Y8�^��.8K��kXi{n[	�Z�.K�>Y(�XZ�[�Y�K��z��y�h�^�>8.K��{�NyK�X8�K��Y��K����K�����Z(>y�NX�ni�h�Z����K��z؞Y�K������Y�X�K��X�>{����i[h��8#��Ɠ���V����6V7F�����6V7F���6�73�'6V7F���"�C�&6��vV��r#��F�b6�73�'6V7F���ֶ�6�W"#�fW'6�����7F�'���F�c�ƃ#�x��i�΋��K�>��[�S���#��F�b6�73�&6��vV��r#��F�b6�73�&6��vR�&�r#��#�c��#���[��z��Z)�x�[�.Yˮjni�n�ɮK���V�ǒ6��W2���j�K��zپ����K�N[�NX{�x�8�	[�Nh��X�~y�N{�nX�n������[�nX�XZ^iȎ[�nkX�x�i�.{��K��z��ZIn��k.i�^k�z	Nz�n8#�����F�c��F�b6�73�&6��vR�&�r#��#�c#��#���X�XZT����X��X�YXnY8K��i	�{J.��k.y�N���K��8Y��x�~�xn�x�X˞�X�Z�j����[n(	�{�>i��[�ZI�K�niȞiX�Y�j��[�[	(	ފ�nX��K��k��YʎK�{���I��X�8#�����F�c��F�b6�73�&6��vR�&�r#��#�c"���#���K��ZH�(	�i�^yȾiˮKɮ{�>��(	�K�NK�.�ɾyJ�(	�K�~Y8K���in�^���[�n(	�i��K�>h�ދy�N�I��Xފ������[�nZ��^K��K�>�����Z��h��in�SC�K��X��zپ8#�����F�c��F�b6�73�&6��vR�&�r#��#�c"�#��#���h��[^K��>K��Z)�x�X	�������ɾX�XZ^Z��X�>[�B�iȞiX���K�j�N8Y�j��z��Y8Xk>z�nj	8X	�����nj�^zپ��K��X�����h
-~KɎX�n8#�����F�c��F�b6�73�&6��vR�&�r#��#�c"�3��#���hȕ6�nkX�x�K�ޚ)ޘ�X�nj��K��K�>��Ɨ7F��ry�NK�NK��j�[�>X��K�>��Ί^����3ZJ��H�x�86��F���r%5.8K��i�ni{n�{NY(�d$�d$�j�����ɾK�N{�N[�>X��Y�~��>X{�(	�h�K�NX�Nij�(	�8#�����F�c���F�c���6V7F�����f��FW"6�73�&f��FW"#��7��V�ǒ6��W2Z)�x�[�.YˮiˮKɮh�nh�h�^Y���7���7��c"�2+r##b�r�#s��7����f��FW#���������'F�6�S��67&�C�6��7B7W'fW3հ����v�V�ǒ��GFV��VV�2r�ӧ�s##R�Rs�C��s##R�bs�SR�s##R�rs�#r�s##R��s�3�s##b�"s�#Sr�s##b�2s��r�s##b�Bs�#SB�s##b�Rs�3cS"�s##b�bs�C�3r�s##b�rs�3�C��������v�V�ǒ�V�W2r�ӧ�s##R�2s�#32�s##R�Bs�3s"�s##R�Rs�c�s##R�bs�c�s##R�rs�C3r�s##R��s�#S��s##R��s�#C"�s##R�s�3B�s##b�s����s##b�"s�C32�s##b�2s�###�s##b�Bs�3#R�s##b�Rs�C��"�s##b�bs�S���s##b�rs�3�w�������v�V�ǒ�V�W2f�"v��V�r�ӧ�s##R�"s�Sb�s##R�2s�Cb�s##R�Bs�S��s##R�Rs�cS��s##R�bs��C��s##R�rs�cs�s##R��s�C2�s##R��s��B�s##R�s�3b�s##b�s�S�s##b�"s�SC2�s##b�2s�3�B�s##b�Bs�Cssr�s##b�Rs�c2�s##b�bs�S�3��s##b�rs�CC#�������v�V�ǒf�6�W&��6�F�2r�ӧ�s##R�Rs�3�s##R�bs�3b�s##b�2s�3�s##b�Bs�C��s##b�Rs�C#��s##b�bs��3B�s##b�rs��3�������v�'���R�V�ǒf�G2r�ӧ�s##R�rs�c�s##b�2s�C3r�s##b�Bs�Ss"�s##b�Rs�S���s##b�bs�cC��s##b�rs��#�������v�V�ǒ�'���W2r�ӧ�s##R�bs�3�s##R�rs���s##R��s�cB�s##R��s�C�s##b�"s��2�s##b�2s�CC�s##b�Bs�c���s##b�Rs��sb�s##b�bs��#B�s##b�rs�sSw�������v�V�ǒ�'���W2f�"v��V�r�ӧ�s##R�2s����s##R�Bs�#B�s##R�Rs�3S2�s##R�bs�C3b�s##R�rs�3�b�s##R��s�#Sb�s##R��s���s##b�"s�3���s##b�2s�#cr�s##b�Bs�cr�s##b�Rs��c�s##b�bs�#cB�s##b�rs���w�������v'&�v��V�ǒf�G2r���FS�s##^kK��x>Yʃ�(	CiȎ�ɳ##nh�X�ވ{3.(	C~iȎ���i�.izY�iȎY��{��r�ӧ�s##R��s��R�s##R�s�s�s##b�"s�C��s##b�2s�3cR�s##b�Bs���r�s##b�Rs�c�s##b�bs�scr�s##b�rs�S#7�������v�V�ǒ6Ɨ��6��W2v��V�r�ӧ�s##R�Bs���s##R�Rs���s##R�bs�#b�s##R�rs�S��s##R��s�Cb�s##b�2s�3c��s##b�Bs�S�"�s##b�Rs�c3R�s##b�bs��3"�s##b�rs���������v6�V"�V�ǒf�G2r�ӧ�s##R�Bs�sb�s##R�Rs�#Cb�s##R�bs�C#2�s##R�rs�CC2�s##R��s�3C2�s##R��s�#C��s##R�s�sR�s##b�s�#b�s##b�"s�3�b�s##b�2s���b�s##b�Bs�#s"�s##b�Rs�Cb�s##b�bs��B�s##b�rs�sC'�������v�V�ǒ&��WBf�G2r�ӧ�s##B�bs�3"�s##B�rs�Cr�s##R�2s�3�s##R�Bs����s##R�Rs�3cb�s##R�bs�3C�s##R�rs�3c�s##R��s�#��s##R��s�s�s##R�s�#�s##b�s�cb�s##b�"s�#CR�s##b�2s�c�s##b�Bs�c��s##b�Rs����s##b�bs�32�s##b�rs��37�������v�V�ǒ�W6�f�G2r�ӧ�s##B�bs�3b�s##B�rs�S�s##R�Bs�sB�s##R�Rs�#3R�s##R�bs�#�s##R�rs����s##R��s��B�s##R��s�#r�s##b�"s��r�s##b�2s�3C��s##b�Bs�C�B�s##b�Rs�c���s##b�bs�s#r�s##b�rs�Cc'�������v�V�ǒ&��WBf�G2f�"v��V�r�ӧ�s##B�Bs�#b�s##B�Rs�#B�s##B�bs�#���s##B�rs�3��s##B��s�#cR�s##B��s�c�s##R�"s�S�s##R�2s�33"�s##R�Bs�c3"�s##R�Rs��sB�s##R�bs�C��s##R�rs��R�s##R��s�CSr�s##R��s�c2�s##b�"s�3C�s##b�2s�"�s##b�Bs�C��s##b�Rs�sc�s##b�bs�##B�s##b�rs�S���ТӰ�6��7Bw&�C�F�7V�V�B�vWDV�V�V�D'��B�v7W'fR�w&�Br���3�v�GG���wwr�s2��&r�#�7frr�f�C��������V���~(	Bs���F���6�U7G&��r�vV��U2r���6��7B�V'3ճ##B�##R�##e��6���'3׳##C�r6#F32r�##S�r3SsC�r�##c�r3#Sc6V"wӰ�6��7BVF�FVEFW&�3��Wr6WB��v�V�ǒ��GFV��VV�2r�v�V�ǒ�V�W2f�"v��V�r�v�V�ǒ�'���W2f�"v��V�r�v�V�ǒ&��WBf�G2f�"v��V�uғ��7W'fW2�f�$V6���2Ɩ�FW���簢6��7B&���F�7V�V�B�7&VFTV�V�V�B�vF�br��&���6�74��S�v7W'fRs�&���FF6WB�7FGW3�VF�FVEFW&�2�2�2沓�vVF�FVBs�wV�F��rs�&���FF6WB��FW�֖�FW���6��7B��F�7V�V�B�7&VFTV�V�V�B�v�2r����FW�D6��FV�C�2泶&���V�D6���B�����6��7B�'3յӶf�"��WB������s�Ҳ���6��7B���7G&��r�Ғ�E7F'B�"�sr���2�ն##R�G������#�2�ն##b�G����Ӷ�b�bf"��'2�W6��"��Т6��7B#�F�7V�V�B�7&VFTV�V�V�B�vF�br��"�6�74��S�w&F��s�"�FW�D6��FV�C�2���FW��'2��V�wF��h�iȞX��j�NiȎK��Y�j�NZ)�[�G��F��֖�����'2��F�f��VB���(	BG��F���������'2��F�f��VB���9v�s##nikX{�x����i�.izY�iȎY��{��r��&���V�D6���B�"���6��7B7fs�F�7V�V�B�7&VFTV�V�V�D�2��2�w7frr��7fr�6WDGG&�'WFR�wf�Wt&��r�sS##br��7fr�6WDGG&�'WFR�w&��Rr�v��rr��7fr�6WDGG&�'WFR�v&���&V�r�G�2��##N�{3##niȎY�~Y�i	�{J.�x�Y�j�Ni�.{�����6��7Bf�3��&�V7B�f�VW2�2�Ғ�����F��������f�2���"ǃ����C"������CǓ�c���B҇b�����S��6��7BFC҇Fr����6��7BS�F�7V�V�B�7&VFTV�V�V�D�2��2�Fr���&�V7B�V�G&�W2���f�$V6������eғ��R�6WDGG&�'WFR���b���7fr�V�D6���B�R��&WGW&�WӰ����R���f�$V6����6��7Bw���B��S�FB�vƖ�RrǶ6�73�vw&�FƖ�Rrǃ�C"Ǔ�w�ǃ#�C�"Ǔ#�w�ғ�6��7BC�FB�wFW�BrǷ��3rǓ�w��2�wFW�B��6��"s�vV�Bwғ�B�FW�D6��FV�C�f�B��F��&�V�B������ғ��f�"��WB������#�Ҳ����b��������S#�����6��7BC�FB�wFW�BrǷ����ҒǓ�#r�wFW�B��6��"s�v֖FF�Rwғ�B�FW�D6��FV�C�Ҳ~iȂw�Т�V'2�f�$V6���#���WBC�rr�G&v��s�f�6S�f�"��WB������#�Ҳ���6��7Bc�2�նG��'��G�7G&��r�Ғ�E7F'B�"�sr��Ӷ�b�c���V��G&v��s�f�6S�6��F��VW�B�҆G&v��s�t�s�t�r����Ғ�r�r���b��rs�G&v��s�G'VW֖b�B�FB�wF�rǶ6�73�vƖ�Rr�B�7G&��S�6���'5��%�ғ�f�"��WB������#�Ҳ���6��7Bc�2�նG��'��G�7G&��r�Ғ�E7F'B�"�sr��Ӷ�b�b��V�FB�v6�&6�RrǶ6�73�vF�Br�7����Ғ�7����b��#�2�f��æ6���'5��%�җ�ғ��6��7B7W'6�#�FB�vƖ�RrǷ��C"Ǔ�#�ǃ#�C"Ǔ#��B�7G&��S�r3c3s�2r�w7G&��R�v�GF�s��w7G&��R�F6�'&�s�s22r�f�6�&�ƗG��v��FFV�wғ��6��7B��C�FB�w&V7BrǷ��C"Ǔ�#B�v�GF��CCƆV�v�C�cB�f��âwG&�7&V�Bwғ��6��7B&VC�F�7V�V�B�7&VFTV�V�V�B�vF�br��&VB�6�74��S�w&VF�WBs�&VB�FW�D6��FV�C�~z{�X����j~h�nYʎ�n�:���h��iȎK��i�^yȾi[X�s����B�FDWfV�DƗ7FV�W"�v��W6V��fRr�S��6��7B&V7C�7fr�vWD&�V�F��t6ƖV�E&V7B���7�҆R�6ƖV�E��&V7B��VgB��S�&V7B�v�GF�����F�������F��֖�"��F��&�V�B��7��C"��C�����7W'6�"�6WDGG&�'WFR�w�rǂ�Ғ��7W'6�"�6WDGG&�'WFR�w�"rǂ�Ғ��7W'6�"�6WDGG&�'WFR�wf�6�&�ƗG�r�wf�6�&�Rr��&VB�FW�D6��FV�C�G���iȎ���##BG�f�B�2�ն##B�G�7G&��r�Ғ�E7F'B�"�sr��җ����##RG�f�B�2�ն##R�G�7G&��r�Ғ�E7F'B�"�sr��җ����##bG�f�B�2�ն##b�G�7G&��r�Ғ�E7F'B�"�sr��җ�ғ����B�FDWfV�DƗ7FV�W"�v��W6V�VfRr���7W'6�"�6WDGG&�'WFR�wf�6�&�ƗG�r�v��FFV�r���b�F�7V�V�B�vWDV�V�V�D'��B�v���F��6V�V7Br��f�VS���sr�&VB�FW�D6��FV�C�~z{�X����j~h�nYʎ�n�:���h��iȎK��i�^yȾi[X�wғ��&���V�B�7fr�&VB��w&�B�V�D6���B�&�����ғ���6��7B&�f��W3װ��V�W3��F�F�S�v�V�ǒ�V�W2f�"v��V�r�f�C�s#r�C�r�&FS�sSb�2Rr�f�7Vâ~K��(	N���r�7F���~h�K�NX�Nij�r�6���~j�[�>X��K�>�H�x��K����86��F���r%5"3����Ί�i��z�iȞX{�X�^�;�X��8"r�f�7V���FS�~K�NK��j�[�>X��K�>Y�~K��d$���K�NK��i�n[{.�h^��s.K��iȎ�ɾhȞ�xNX��h�K�NX�Nij����K�ވ;�K��K��d$�ikY8X��ZH�X�n��h��8"w����'���F�F�S�v�V�ǒ�'���W2f�"v��V�r�f�C�s#R�C�r�&FS�sS"�Rr�f�7Vâ~���r�7F���td$ikY8+rh�K�NX�Nij�r�6���~j�[�>X��K�>K��i�n{�c�nK��iȎ��ΙH�x�s�K����86��F���r%5"3�8"r�f�7V���FS�~���i��i��z�y�NikY8X{�X�^X�X�nK�X�~�ɾK�nK�NK��j�[�>X��K�>Y�~K��d$���Y�j�Nh�K�NX�Nij�8"w���f�6�W&�㧷F�F�S�v�V�ǒf�6�W&��6�F�2f�"v��V�r�f�C�sB�C�r�&FS�s#��"Rr�f�7Vâ~���r�7F���~h�xi�d$+rh�K�NX�Nij�r�6���~j�[�>X��K�>�H�x�S�K���86��F���r%5"3"�s~���[�K��(	�[	�Έ;�X�n(	�8"r�f�7V���FS�~K�>��Ɨ7F��r�z�#�[�NK��i�nK�NK�NK��j�[�>X��K�>Y�~K��d$���K��[�K���i��ikY8[���	���Ί���h��8"w���&��WC��F�F�S�v�V�ǒ&��WBf�G2f�"v��V�r�f�C�s3�C�r�&FS�scB�bRr�f�7Vâ~���r�7F���~h�K�NX�Nij�r�6���~K�>��Ɨ7F��r6��F���r%5"3����K�NK��j�[�>X��K�3niȎX�nX�.�H�x�i��i��8"r�f�7V���FS�~[�>X��K�NK��j�[�>X��K�>�H�x�Y�~K��K��SK�NXZ��:�d$�ɾ��{�>Y�Z�>��.Y���h�K�NX�Nij�8"w�����GFV㧷F�F�S�v�V�ǒ��GFV��VV�2r�f�C�s3�C�r�&FS�sc"�RRr�f�7Vâ~K��(	N���r�7F���td$ikY8+rh�K�NX�Nij�r�6���~j�[�>X��K�>K��i�n{�c�K��iȎ��ΙH�x�#�K���86��F���r%5"33r��8"r�f�7V���FS�~ikY8X{�X�^��h��h�z�����K�nK�NK��j�[�>X��K�>Y�~K��d$�ɾ�xn�x�[z�[�.X�nK�ޙ�X�^x�Κ�Ί�8"wТӰ�6��7B&�f��T�G3׷F�F�S�v��7V7B�F�F�Rr�f�C�v��7V7B�f�Br�&FS�v��7V7B�&FRr�f�7Vâv��7V7B�f�7V�r�7F���v��7V7B�7F���r�6���v��7V7B�6��r�f�7V���FS�v��7V7B�f�7V����FRwӰ�6��7BF�ff�7V�G�F���s�F�7V�V�B�vWDV�V�V�D'��B�vF�ff�7V�G��F���rr���gV�7F���6V�V7E&�f��R��W����6��7B�&�f��W5��W�Ӷ�b��&WGW&㰢�&�V7B�V�G&�W2�&�f��T�G2��f�$V6����f�V�BƖEғ��F�7V�V�B�vWDV�V�V�D'��B��B��FW�D6��FV�C��f�V�Eғ��F�7V�V�B�VW'�6V�V7F�$�r�VF�B�6&E�FFֶW��r��f�$V6��6&C��6&B�6�74Ɨ7B�F�vv�R�v�2�6V�V7FVBr�6&B�FF6WB�W���ֶW������b�G�V�bF�ff�7V�G�F���r�6��t��F����vgV�7F���r�F�ff�7V�G�F���r�6��t��F��V�6RF�ff�7V�G�F���r�6WDGG&�'WFR�v�V�r�rr���ТF�7V�V�B�VW'�6V�V7F�$�u�FF֖�7V7E�r��f�$V6��'WGF����'WGF���FDWfV�DƗ7FV�W"�v6Ɩ6�r���6V�V7E&�f��R�'WGF���FF6WB��7V7B�����F�7V�V�B�vWDV�V�V�D'��B�vF���r�6��6Rr��FDWfV�DƗ7FV�W"�v6Ɩ6�r���F�ff�7V�G�F���r�6��6R�����F�ff�7V�G�F���r�FDWfV�DƗ7FV�W"�v6Ɩ6�r�WfV�C�綖b�WfV�B�F&vWC���F�ff�7V�G�F���r�F�ff�7V�G�F���r�6��6R��ғ���F�7V�V�B�VW'�6V�V7F�$�u�FF�f��FW%�r��f�$V6��'WGF����'WGF���FDWfV�DƗ7FV�W"�v6Ɩ6�r��簢6��7Bf��FW#�'WGF���FF6WB�f��FW#��F�7V�V�B�VW'�6V�V7F�$�u�FF�f��FW%�r��f�$V6���FV���6��7B7F�fS֗FV����'WGF�㶗FV��6�74Ɨ7B�F�vv�R�v�2�7F�fRr�7F�fR���FV��6WDGG&�'WFR�v&��&W76VBr�7G&��r�7F�fR��ғ��F�7V�V�B�VW'�6V�V7F�$�r�6�F�FFR�&�u�FF�7FvU�r��f�$V6���FV���FV��6�74Ɨ7B�F�vv�R�v�2ֆ�FFV�r�f��FW"��v��rbf�FV��FF6WB�7FvR��f��FW"����Ғ����F�7V�V�B�VW'�6V�V7F�$�r�7W�'F��rr��f�$V6��6V7F����簢6��7B'WGF���F�7V�V�B�7&VFTV�V�V�B�v'WGF��r��'WGF���G�S�v'WGF��s�'WGF���6�74��S�w6V7F����F�vv�Rs��6��7BWFFS҂���6��7B6���6VC�6V7F����6�74Ɨ7B�6��F��2�v�2�6���6VBr��'WGF���FW�D6��FV�C�6���6VC�~[^[���n{�n��h��s�~iKn�[~��n{�n��h��s�'WGF���6WDGG&�'WFR�v&��W��FVBr�7G&��r�6���6VB��Ӱ�WFFR���6V7F����VW'�6V�V7F�"�v�"r��gFW"�'WGF�⓶'WGF���FDWfV�DƗ7FV�W"�v6Ɩ6�r���6V7F����6�74Ɨ7B�F�vv�R�v�2�6���6VBr��WFFR��ғ��ғ���F�7V�V�B�vWDV�V�V�D'��B�v���F��6V�V7Br��FDWfV�DƗ7FV�W"�v6��vRr�WfV�C�簢6��7B���F���V�&W"�WfV�B�F&vWB�f�VR���F�7V�V�B�VW'�6V�V7F�$�r�7W'fRr��f�$V6��&���簢6��7B&VC�&���VW'�6V�V7F�"�r�&VF�WBr��3�7W'fW5��V�&W"�&���FF6WB��FW��Ӱ��b����F���&VB�FW�D6��FV�C�~z{�X����j~h�nYʎ�n�:���h��iȎK��i�^yȾi[X�s�&WGW&�Т6��7B���7G&��r����F���E7F'B�"�sr��&VB�FW�D6��FV�C�G����F��iȎ���##BG�f�B�2�ն##B�G����җ����##RG�f�B�2�ն##R�G����җ����##bG�f�B�2�ն##b�G����җ���ғ��ғ��F�7V�V�B�vWDV�V�V�D'��B�w&��B�&W�'Br��FDWfV�DƗ7FV�W"�v6Ɩ6�r���v��F�r�&��B�������67&�C���&�G�����F���
+    @media(max-width:520px){.hero,main{padding-left:18px;padding-right:18px}.hero{padding-top:38px}.hero h1{font-size:26px}.metric-grid,.curve-grid{grid-template-columns:1fr}.rank-item{grid-template-columns:36px 1fr}.rank-item em{grid-column:2}.footer{display:block}}
+    @media print{body{background:#fff}.report{max-width:none;box-shadow:none}.toolbar,.inspect-btn{display:none!important}.hero{print-color-adjust:exact;-webkit-print-color-adjust:exact}.section{break-inside:avoid}.curve{break-inside:avoid}.table-wrap{overflow:visible}}
+  </style>
+</head>
+<body>
+<article class="report">
+  <header class="hero">
+    <div class="eyebrow">Amazon US · Incremental Demand Discovery</div>
+    <h1>Jelly Shoes 增量市场机会挖掘报告</h1>
+    <p>面向 Amazon US 开发人员的出单机会决策页：先验证增量需求，再按“有效同款 → 同款出单能力 → 履约结构 → 流量与需供比加分”逐层作出继续、提交或放弃判断。</p>
+    <div class="meta"><span class="pill">版本 V2.3 · 核心变体验证版</span><span class="pill">站点 US</span><span class="pill">13 个增量词全量入池</span><span class="pill">Sif MCP + Amazon首页与商品详情核验</span><span class="pill">竞品数据截至 2026-07-26</span><span class="pill">Amazon快照 2026-07-27</span></div>
+  </header>
+  <nav class="toolbar" aria-label="互动分析工具">
+    <div class="toolbar-group" aria-label="快速定位">
+      <span class="toolbar-label">快速定位</span>
+      <a class="filter-btn jump-link" href="#summary">结论</a>
+      <a class="filter-btn jump-link" href="#decision-tree">判断规则</a>
+      <a class="filter-btn jump-link" href="#candidates">13词进度</a>
+      <a class="filter-btn jump-link" href="#variant-validation">核心变体</a>
+      <a class="filter-btn jump-link" href="#curves">流量曲线</a>
+      <a class="filter-btn jump-link" href="#research">需求来源</a>
+    </div>
+    <div class="toolbar-group">
+      <label class="toolbar-label" for="month-select">曲线月份</label>
+      <select class="month-select" id="month-select"><option value="0">鼠标探索</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select>
+      <button class="tool-btn" id="print-report" type="button">打印 / 保存 PDF</button>
+    </div>
+  </nav>
+  <main>
+    <section class="section" id="summary">
+      <div class="section-kicker">Executive verdict</div><h2>结论：5个样本均已验证有单，但核心变体全部由FBA承接</h2>
+      <div class="verdict"><strong>竞品验证已完成第一批，不再停留在“待核验”。</strong> 5个代表性有效同款 Listing 的10个核心变体均进入 Clothing BSR #100万以内；Mary Jane与Kitten Heel还出现了约1—2个月内已经出单的新品。但10个核心变体全部是第三方卖家、Amazon配送，因此按既定规则统一进入“仅FBA出单，提交判断”，不能直接套用FBM小卖家可复制结论。</div>
+      <div class="reading-path" aria-label="三步读懂结论">
+        <article class="reading-card good"><span>01 · 已确认</span><b>13 个增量需求成立</b><small>10个词2025首次出现，3个词连续三年增长。</small></article>
+        <article class="reading-card next"><span>02 · 已验证</span><b>5个样本均有BSR与销量证据</b><small>Mary Jane与Kitten Heel出现1—2个月新品出单。</small></article>
+        <article class="reading-card stop"><span>03 · 当前限制</span><b>10个核心变体全部FBA主导</b><small>按规则提交判断，不直接视为FBM可复制机会。</small></article>
+      </div>
+      <div class="metric-grid">
+        <div class="metric"><span>增量候选池</span><b>13 个词</b><small>全部进入第一层审核</small></div>
+        <div class="metric"><span>已完成同款初筛</span><b>4 + 1 个词</b><small>4个池内词 + 1个观察词</small></div>
+        <div class="metric"><span>待做同款初筛</span><b>9 个词</b><small>不因语义相近而提前合并</small></div>
+        <div class="metric"><span>竞品验证结果</span><b>5个提交判断</b><small>仅FBA核心变体出单</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="decision-tree">
+      <div class="section-kicker">Go / No-Go decision tree</div><h2>上首页与出单机会必须逐层判断，不能压缩成一个单项评分</h2>
+      <div class="decision-flow">
+        <article class="decision-step"><b>1 · 有效同款</b><p>同时检查关键词语义与图片视觉，确认产品是否真的满足该词对应的需求、场景与设计预期。</p><small>无同款／极少且上架≤1周 → 直接上架</small></article>
+        <article class="decision-step"><b>2 · 同款是否出单</b><p>若同款上架超过 1 周，检查 Clothing 大类 BSR。所有同款均在 #100万以外则放弃。</p><small>存在 #100万以内同款 → 继续</small></article>
+        <article class="decision-step"><b>3 · 新品与履约</b><p>若 FBM/Amazon 同款有单，且 1—2 月新品能进 #100万，机会加分；若仅 FBA 有单则提交上级判断。</p><small>决定：加分进入／提交判断／放弃</small></article>
+        <article class="decision-step"><b>4 · 流量加分</b><p>月搜索量≥1,000或周搜索量≥200—300加分；近一年新出现且持续则大幅加分。再看宽口径与有效供给需供比。</p><small>流量不是替代竞品验证的终点</small></article>
+      </div>
+      <p class="chart-note" style="margin-top:16px">执行口径：“有效同款”不是 Amazon 页面显示的 Results 总数，而是关键词、产品形态、主图视觉、需求场景均一致的实际竞品。13 个词必须分别审核；只有在 SERP 重合与买家意图重合得到验证后，才允许合并为同一市场。</p>
+    </section>
+
+    <section class="section" id="candidates">
+      <div class="section-kicker">All 13 candidates</div><h2>13 个增量词的当前决策节点</h2>
+      <p class="lead">下表把“已有数据”和“下一步动作”放在同一行。月均周搜索量来自曲线最后一个已返回月份；它不是月搜索量。宽口径需供比＝月搜索量÷Amazon Results，有效需供比＝月搜索量÷有效同款初筛数。</p>
+      <div class="candidate-tools" role="group" aria-label="候选词筛选"><span class="toolbar-label">只看</span><button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">全部 13 词</button><button class="filter-btn" type="button" data-filter="audited" aria-pressed="false">已完成初筛 · 4</button><button class="filter-btn" type="button" data-filter="pending" aria-pressed="false">待审核 · 9</button></div>
+      <div class="table-wrap"><table class="candidate-table">
+        <thead><tr><th>增量词</th><th>当前决策</th><th>增长证据</th><th>最新月均周搜索量</th><th>有效同款</th><th>需供比</th></tr></thead>
+        <tbody>
+          <tr class="candidate-row" data-stage="audited"><td>jelly kitten heels</td><td data-label="当前决策"><span class="tag status-submit">FBA新品 · 提交判断</span></td><td data-label="增长证据">2025首次 · 25.4×<br><span class="confidence">2026峰值 6,015</span></td><td data-label="最新月均周搜索量" class="num">3,949</td><td data-label="有效同款" class="num">30 / 48</td><td data-label="需供比"><div class="metric-pair"><span>宽口径 / 有效</span><b>34.8 / 537</b></div></td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly mules</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 9.7×<br><span class="confidence">2026峰值 7,651</span></td><td data-label="最新月均周搜索量" class="num">3,907</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly fisherman sandals</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 8.9×<br><span class="confidence">2026峰值 1,303</span></td><td data-label="最新月均周搜索量" class="num">831</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>mary jane jelly flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 7.7×<br><span class="confidence">2026峰值 1,237</span></td><td data-label="最新月均周搜索量" class="num">821</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="audited"><td>jelly mules for women</td><td data-label="当前决策"><span class="tag status-submit">FBA出单 · 提交判断</span></td><td data-label="增长证据">2025首次 · 7.4×<br><span class="confidence">2026峰值 8,388</span></td><td data-label="最新月均周搜索量" class="num">4,421</td><td data-label="有效同款" class="num">27 / 48</td><td data-label="需供比"><div class="metric-pair"><span>宽口径 / 有效</span><b>31.9 / 637</b></div></td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>brown jelly flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 5.9×<br><span class="confidence">2026峰值 1,257</span></td><td data-label="最新月均周搜索量" class="num">523</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly mary janes</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 5.3×<br><span class="confidence">2026峰值 1,267</span></td><td data-label="最新月均周搜索量" class="num">757</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="audited"><td>jelly mary janes for women</td><td data-label="当前决策"><span class="tag status-submit">FBA新品 · 提交判断</span></td><td data-label="增长证据">2025首次 · 5.4×<br><span class="confidence">2026峰值 2,671</span></td><td data-label="最新月均周搜索量" class="num">1,987</td><td data-label="有效同款" class="num">25 / 48</td><td data-label="需供比"><div class="metric-pair"><span>宽口径 / 有效</span><b>18.3 / 412</b></div></td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly slip on shoes women</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 4.8×<br><span class="confidence">2026峰值 1,050</span></td><td data-label="最新月均周搜索量" class="num">810</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>clear jelly flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">2025首次 · 2.6×<br><span class="confidence">2026峰值 1,515</span></td><td data-label="最新月均周搜索量" class="num">742</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly ballet flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">连续三年增长<br><span class="confidence">2026峰值 1,499</span></td><td data-label="最新月均周搜索量" class="num">833</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="pending"><td>jelly mesh flats</td><td data-label="当前决策"><span class="tag status-pending">待审核有效同款</span></td><td data-label="增长证据">连续三年增长<br><span class="confidence">2026峰值 868</span></td><td data-label="最新月均周搜索量" class="num">462</td><td data-label="有效同款" class="num">—</td><td data-label="需供比">—</td></tr>
+          <tr class="candidate-row" data-stage="audited"><td>jelly ballet flats for women</td><td data-label="当前决策"><span class="tag status-submit">FBA出单 · 提交判断</span></td><td data-label="增长证据">连续三年增长<br><span class="confidence">2026峰值 2,914</span></td><td data-label="最新月均周搜索量" class="num">1,588</td><td data-label="有效同款" class="num">31 / 48</td><td data-label="需供比"><div class="metric-pair"><span>宽口径 / 有效</span><b>10.2 / 206</b></div></td></tr>
+        </tbody>
+      </table></div>
+      <div class="evidence-box" style="margin-top:16px"><b>第五个验证样本：</b><span class="mono">jelly fisherman sandals for women</span> 是 2026 新出现的观察词，不属于上表13个曲线确认词。有效同款14/48、有效需供比450；其代表 Listing 的两个核心变体均为成熟 FBA，近30天销量分别为50+与100+，因此结果同样是“提交判断”，而不是因同款较少直接上架。</div>
+    </section>
+
+    <section class="section" id="audit">
+      <div class="section-kicker">Effective competitor audit</div><h2>五个前台样本：有效同款初筛与核心变体验证均已完成</h2>
+      <div class="audit-grid">
+        <article class="audit-card" data-key="mules" data-status="audited">
+          <h3>jelly mules for women</h3><div class="intent">买家预期：成人女鞋、后空/一脚蹬mule轮廓、透明或PVC/TPU jelly材质、时装属性。</div>
+          <div class="audit-row"><span>有效同款初筛</span><div class="audit-track"><div class="audit-fill gap" style="width:56.3%"></div></div><b>27 / 48</b></div>
+          <div class="audit-row"><span>主图视觉符合度</span><div class="audit-track"><div class="audit-fill conv" style="width:70%"></div></div><b>中—高</b></div>
+          <div class="audit-row"><span>当前决策节点</span><div></div><b><span class="tag status-submit">提交判断</span></b></div>
+          <p class="finding">首页已大量出现透明/网格PVC、后空闭口mule。代表 Listing 的两个核心变体近30天销量为800+与1,000+、BSR #1,119，但均为FBA且上架已超过2个月；证明确有需求，不满足直接上架规则。</p><button class="inspect-btn" type="button" data-inspect="mules">查看决策证据</button>
+        </article>
+        <article class="audit-card" data-key="mary" data-status="audited">
+          <h3>jelly mary janes for women</h3><div class="intent">买家预期：成人女鞋、明确Mary Jane横带、jelly/PVC/TPU材质、日常平底而非儿童cosplay。</div>
+          <div class="audit-row"><span>有效同款初筛</span><div class="audit-track"><div class="audit-fill gap" style="width:52.1%"></div></div><b>25 / 48</b></div>
+          <div class="audit-row"><span>主图视觉符合度</span><div class="audit-track"><div class="audit-fill conv" style="width:78%"></div></div><b>高</b></div>
+          <div class="audit-row"><span>当前决策节点</span><div></div><b><span class="tag status-submit">FBA新品 · 提交判断</span></b></div>
+          <p class="finding">成人jelly Mary Jane供给已经成片出现。两个核心变体上架约1.6个月，近30天销量700+与1,000+、BSR #910，是明确的新品加分证据；但两者均为FBA，按规则提交判断。</p><button class="inspect-btn" type="button" data-inspect="mary">查看决策证据</button>
+        </article>
+        <article class="audit-card" data-key="fisherman" data-status="audited">
+          <h3>jelly fisherman sandals for women</h3><div class="intent">买家预期：成人女鞋、包头笼状fisherman结构、jelly/PVC材质、可冲洗夏季穿着。</div>
+          <div class="audit-row"><span>有效同款初筛</span><div class="audit-track"><div class="audit-fill gap" style="width:29.2%"></div></div><b>14 / 48</b></div>
+          <div class="audit-row"><span>主图视觉符合度</span><div class="audit-track"><div class="audit-fill conv" style="width:82%"></div></div><b>高</b></div>
+          <div class="audit-row"><span>当前决策节点</span><div></div><b><span class="tag status-submit">成熟FBA · 提交判断</span></b></div>
+          <p class="finding">有效同款14/48，供给少于另外四词；但代表 Listing 的两个核心变体近30天销量50+与100+、BSR #12,177，且是2019年上架的成熟FBA，并非新品快速验证信号。</p><button class="inspect-btn" type="button" data-inspect="fisherman">查看决策证据</button>
+        </article>
+        <article class="audit-card" data-key="ballet" data-status="audited">
+          <h3>jelly ballet flats for women</h3><div class="intent">买家预期：成人女鞋、包头ballet-flat轮廓、jelly/透明或网格PVC、城市日常穿着。</div>
+          <div class="audit-row"><span>有效同款初筛</span><div class="audit-track"><div class="audit-fill gap" style="width:64.6%"></div></div><b>31 / 48</b></div>
+          <div class="audit-row"><span>主图视觉符合度</span><div class="audit-track"><div class="audit-fill conv" style="width:86%"></div></div><b>高</b></div>
+          <div class="audit-row"><span>当前决策节点</span><div></div><b><span class="tag status-submit">提交判断</span></b></div>
+          <p class="finding">成人jelly ballerina供给与视觉已经成熟。代表 Listing 的BSR为#190，两个核心变体6月历史销量明显，但当前各低于50且均为FBA；需结合季节回落提交判断，不直接复制。</p><button class="inspect-btn" type="button" data-inspect="ballet">查看决策证据</button>
+        </article>
+        <article class="audit-card" data-key="kitten" data-status="audited">
+          <h3>jelly kitten heels</h3><div class="intent">买家预期：真实低细跟kitten heel、jelly/透明TPU鞋面与鞋身、成人女性轻正式/派对场景。</div>
+          <div class="audit-row"><span>有效同款初筛</span><div class="audit-track"><div class="audit-fill gap" style="width:62.5%"></div></div><b>30 / 48</b></div>
+          <div class="audit-row"><span>主图视觉符合度</span><div class="audit-track"><div class="audit-fill conv" style="width:72%"></div></div><b>中—高</b></div>
+          <div class="audit-row"><span>当前决策节点</span><div></div><b><span class="tag status-submit">FBA新品 · 提交判断</span></b></div>
+          <p class="finding">有效同款较多，但主图仍存在海滩flip-flop与轻正式时装低跟的视觉分化。两个核心变体上架约1.8个月，销量200+与100+、BSR #37,090，是新品出单证据；两者均为FBA。</p><button class="inspect-btn" type="button" data-inspect="kitten">查看决策证据</button>
+        </article>
+        <article class="audit-card" data-status="audited">
+          <h3>初筛如何使用</h3><div class="intent">它只回答“前台有多少产品真的响应这个词”，不直接回答“新品是否能上首页或出单”。</div>
+          <p class="finding"><b>第一层：关键词语义。</b> 同时满足成人目标人群、jelly材质与指定鞋型；只满足一项不算有效同款。<br><br><b>第二层：图片视觉。</b> 主图是否表达买家真正寻找的场景与审美来源。<br><br><b>第三层：核心变体。</b> 对每个代表 Listing 按Sif流量份额取前两个变体，核验销量、BSR、上架时间与履约。五组均有出单，但本轮10个核心变体全部为FBA，因此统一进入提交判断。</p>
+        </article>
+      </div>
+      <dialog class="difficulty-dialog" id="difficulty-dialog"><div class="dialog-inner"><div class="dialog-head"><div><div class="section-kicker">Decision evidence</div><h3 id="inspect-title"></h3></div><button class="dialog-close" id="dialog-close" type="button" aria-label="关闭">×</button></div><p class="dialog-copy" id="inspect-copy"></p><div class="dialog-stats"><div class="dialog-stat"><span>有效同款初筛</span><b id="inspect-fit"></b></div><div class="dialog-stat"><span>有效同款占比</span><b id="inspect-rate"></b></div><div class="dialog-stat"><span>主图视觉符合度</span><b id="inspect-visual"></b></div><div class="dialog-stat"><span>当前决策节点</span><b id="inspect-action"></b></div></div><div class="visual-note" id="inspect-visual-note"></div></div></dialog>
+    </section>
+
+    <section class="section" id="variant-validation">
+      <div class="section-kicker">Core variant validation</div><h2>核心变体验证：只看每个代表 Listing 流量最高的两个变体</h2>
+      <p class="lead">核心变体按 Sif Listing 近30天流量份额排序选取；销量使用 Sif 近30天销量，BSR、Date First Available、Ships from 与 Sold by 使用 Amazon 当前商品详情页。第三方卖家且 Amazon 配送判定为 FBA。</p>
+      <div class="validation-grid">
+        <article class="validation-card">
+          <div class="validation-head"><div><h3>jelly mules for women</h3><p>CUSHIONAIRE Lab Jelly Flats · 18个变体</p></div><span class="tag status-submit">提交判断</span></div>
+          <div class="validation-stats"><div class="validation-stat"><span>Clothing BSR</span><b>#1,119</b></div><div class="validation-stat"><span>Date First Available</span><b>2026-04-17</b></div><div class="validation-stat"><span>上架阶段</span><b>超过2个月</b></div><div class="validation-stat"><span>履约判断</span><b>两个均FBA</b></div></div>
+          <div class="table-wrap"><table class="variant-table"><thead><tr><th>核心变体</th><th>规格</th><th>流量份额</th><th>近30天销量</th><th>履约</th></tr></thead><tbody><tr><td><a class="source-link" href="https://www.amazon.com/dp/B0GXLJKY8W" target="_blank" rel="noopener">B0GXLJKY8W</a></td><td>7 / Chocolate</td><td>25.6%</td><td>800+</td><td>FBA</td></tr><tr><td><a class="source-link" href="https://www.amazon.com/dp/B0H2FXW8BZ" target="_blank" rel="noopener">B0H2FXW8BZ</a></td><td>8 / Tortoise</td><td>20.3%</td><td>1,000+</td><td>FBA</td></tr></tbody></table></div>
+          <p class="decision-note"><b>判断：</b>两个核心变体均有明显销量且BSR远在#100万以内，但全部依赖FBA承接；按规则提交上级判断。</p>
+          <p><a class="source-link" href="https://www.sif.com/timemachine-traffic?country=US&amp;from=mcp_analysis&amp;asin=B0GXLJKY8W" target="_blank" rel="noopener">查看Sif流量验证</a></p>
+        </article>
+        <article class="validation-card">
+          <div class="validation-head"><div><h3>jelly mary janes for women</h3><p>CUSHIONAIRE Java Jelly Mary Janes · 30个变体</p></div><span class="tag status-submit">FBA新品 · 提交判断</span></div>
+          <div class="validation-stats"><div class="validation-stat"><span>Clothing BSR</span><b>#910</b></div><div class="validation-stat"><span>Date First Available</span><b>2026-06-09</b></div><div class="validation-stat"><span>上架阶段</span><b>约1.6个月新品</b></div><div class="validation-stat"><span>履约判断</span><b>两个均FBA</b></div></div>
+          <div class="table-wrap"><table class="variant-table"><thead><tr><th>核心变体</th><th>规格</th><th>流量份额</th><th>近30天销量</th><th>履约</th></tr></thead><tbody><tr><td><a class="source-link" href="https://www.amazon.com/dp/B0H4MRPF79" target="_blank" rel="noopener">B0H4MRPF79</a></td><td>7 / Chocolate</td><td>32.1%</td><td>700+</td><td>FBA</td></tr><tr><td><a class="source-link" href="https://www.amazon.com/dp/B0H4MLLC32" target="_blank" rel="noopener">B0H4MLLC32</a></td><td>8 / Chocolate</td><td>21.5%</td><td>1,000+</td><td>FBA</td></tr></tbody></table></div>
+          <p class="decision-note"><b>判断：</b>1—2个月新品已经进入BSR#910并稳定出单，是强加分信号；但核心变体全部FBA，因此不能直接外推FBM可复制性，提交判断。</p>
+          <p><a class="source-link" href="https://www.sif.com/timemachine-traffic?country=US&amp;from=mcp_analysis&amp;asin=B0H4MRPF79" target="_blank" rel="noopener">查看Sif流量验证</a></p>
+        </article>
+        <article class="validation-card">
+          <div class="validation-head"><div><h3>jelly fisherman sandals for women</h3><p>Melissa Possession Fisherman Jelly Sandals · 161个变体</p></div><span class="tag status-submit">成熟FBA · 提交判断</span></div>
+          <div class="validation-stats"><div class="validation-stat"><span>Clothing BSR</span><b>#12,177</b></div><div class="validation-stat"><span>Date First Available</span><b>2019-02-20</b></div><div class="validation-stat"><span>上架阶段</span><b>成熟Listing</b></div><div class="validation-stat"><span>履约判断</span><b>两个均FBA</b></div></div>
+          <div class="table-wrap"><table class="variant-table"><thead><tr><th>核心变体</th><th>规格</th><th>流量份额</th><th>近30天销量</th><th>履约</th></tr></thead><tbody><tr><td><a class="source-link" href="https://www.amazon.com/dp/B095C486VJ" target="_blank" rel="noopener">B095C486VJ</a></td><td>10 / Clear</td><td>40.1%</td><td>50+</td><td>FBA</td></tr><tr><td><a class="source-link" href="https://www.amazon.com/dp/B095BMCCFP" target="_blank" rel="noopener">B095BMCCFP</a></td><td>7 / Clear</td><td>11.3%</td><td>100+</td><td>FBA</td></tr></tbody></table></div>
+          <p class="decision-note"><b>判断：</b>有效同款虽少，但头部是2019年成熟FBA Listing，不属于新卖家快速验证信号；记录并提交判断。</p>
+          <p><a class="source-link" href="https://www.sif.com/timemachine-traffic?country=US&amp;from=mcp_analysis&amp;asin=B095C486VJ" target="_blank" rel="noopener">查看Sif流量验证</a></p>
+        </article>
+        <article class="validation-card">
+          <div class="validation-head"><div><h3>jelly ballet flats for women</h3><p>CUSHIONAIRE Siesta Jelly Ballet Flats · 36个变体</p></div><span class="tag status-submit">提交判断</span></div>
+          <div class="validation-stats"><div class="validation-stat"><span>Clothing BSR</span><b>#190</b></div><div class="validation-stat"><span>Date First Available</span><b>2026-04-27</b></div><div class="validation-stat"><span>上架阶段</span><b>约3个月</b></div><div class="validation-stat"><span>履约判断</span><b>两个均FBA</b></div></div>
+          <div class="table-wrap"><table class="variant-table"><thead><tr><th>核心变体</th><th>规格</th><th>流量份额</th><th>当前近30天销量</th><th>2026-06历史</th></tr></thead><tbody><tr><td><a class="source-link" href="https://www.amazon.com/dp/B0GYQJT3MY" target="_blank" rel="noopener">B0GYQJT3MY</a></td><td>10 / Mocha</td><td>19.3%</td><td>&lt;50</td><td>2,000</td></tr><tr><td><a class="source-link" href="https://www.amazon.com/dp/B0GYQ8JMF4" target="_blank" rel="noopener">B0GYQ8JMF4</a></td><td>8 / Mocha</td><td>16.0%</td><td>&lt;50</td><td>9,000</td></tr></tbody></table></div>
+          <p class="decision-note"><b>判断：</b>Listing BSR极强、核心变体历史销量明显，但当前单变体销量已回落且两个均FBA；提交判断，并关注季节回落而非直接复制。</p>
+          <p><a class="source-link" href="https://www.sif.com/timemachine-traffic?country=US&amp;from=mcp_analysis&amp;asin=B0GYQJT3MY" target="_blank" rel="noopener">查看Sif流量验证</a></p>
+        </article>
+        <article class="validation-card">
+          <div class="validation-head"><div><h3>jelly kitten heels</h3><p>RJYLP Jelly Kitten Heel Mules · 36个变体</p></div><span class="tag status-submit">FBA新品 · 提交判断</span></div>
+          <div class="validation-stats"><div class="validation-stat"><span>Clothing BSR</span><b>#37,090</b></div><div class="validation-stat"><span>Date First Available</span><b>2026-06-02</b></div><div class="validation-stat"><span>上架阶段</span><b>约1.8个月新品</b></div><div class="validation-stat"><span>履约判断</span><b>两个均FBA</b></div></div>
+          <div class="table-wrap"><table class="variant-table"><thead><tr><th>核心变体</th><th>规格</th><th>流量份额</th><th>近30天销量</th><th>履约</th></tr></thead><tbody><tr><td><a class="source-link" href="https://www.amazon.com/dp/B0H3NBYHJS" target="_blank" rel="noopener">B0H3NBYHJS</a></td><td>8 / Blue</td><td>31.4%</td><td>200+</td><td>FBA</td></tr><tr><td><a class="source-link" href="https://www.amazon.com/dp/B0H3NNHR3T" target="_blank" rel="noopener">B0H3NNHR3T</a></td><td>7 / Blue</td><td>14.2%</td><td>100+</td><td>FBA</td></tr></tbody></table></div>
+          <p class="decision-note"><b>判断：</b>1—2个月新品已经进入BSR#37,090并有200+/100+销量，是新品可出单的明确证据；但仍为FBA主导，提交判断。</p>
+          <p><a class="source-link" href="https://www.sif.com/timemachine-traffic?country=US&amp;from=mcp_analysis&amp;asin=B0H3NBYHJS" target="_blank" rel="noopener">查看Sif流量验证</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Front-page evidence</div><h2>首页48位有效同款初筛与需供比</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>搜索词</th><th>月搜索量</th><th>Amazon Results</th><th>有效同款 / 48</th><th>主图视觉符合度</th><th>宽口径需供比</th><th>有效需供比</th><th>核验结论</th></tr></thead>
+        <tbody>
+          <tr><td>jelly mules for women</td><td class="num">17,200</td><td class="num">539</td><td class="num">27（56.3%）</td><td>中—高</td><td class="num ratio-chip">31.9</td><td class="num ratio-chip">637</td><td><span class="tag status-submit">FBA出单 · 提交判断</span></td></tr>
+          <tr><td>jelly mary janes for women</td><td class="num">10,300</td><td class="num">562</td><td class="num">25（52.1%）</td><td>高</td><td class="num ratio-chip">18.3</td><td class="num ratio-chip">412</td><td><span class="tag status-submit">FBA新品 · 提交判断</span></td></tr>
+          <tr><td>jelly fisherman sandals for women</td><td class="num">6,300</td><td class="num">381</td><td class="num">14（29.2%）</td><td>高</td><td class="num ratio-chip">16.5</td><td class="num ratio-chip">450</td><td><span class="tag status-submit">成熟FBA · 提交判断</span></td></tr>
+          <tr><td>jelly ballet flats for women</td><td class="num">6,400</td><td class="num">626</td><td class="num">31（64.6%）</td><td>高</td><td class="num ratio-chip">10.2</td><td class="num ratio-chip">206</td><td><span class="tag status-submit">FBA出单 · 提交判断</span></td></tr>
+          <tr><td>jelly kitten heels</td><td class="num">16,100</td><td class="num">462</td><td class="num">30（62.5%）</td><td>中—高</td><td class="num ratio-chip">34.8</td><td class="num ratio-chip">537</td><td><span class="tag status-submit">FBA新品 · 提交判断</span></td></tr>
+        </tbody>
+      </table></div>
+      <div class="evidence-box" style="margin-top:16px"><b>怎么读需供比：</b>Amazon Results 只能形成宽口径参考；有效同款数更接近真实供给，所以有效需供比明显更高。但这个比值仍不是最终上架结论——如果有效同款长期不出单，应直接放弃；如果近期 FBM/Amazon 新品能够出单，才会构成真正加分。</div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Current decision node</div><h2>验证完成：五个样本均为“仅FBA出单，提交判断”</h2>
+      <div class="ranking">
+        <div class="gate"><strong>Jelly kitten heels</strong><p>上架约1.8个月，核心变体销量200+与100+，Clothing BSR #37,090；符合新品出单加分，但两个核心变体均为FBA。</p><em>FBA新品 · 提交判断</em></div>
+        <div class="gate"><strong>Jelly mules for women</strong><p>核心变体销量800+与1,000+、Clothing BSR #1,119；上架超过2个月，且两个核心变体均为FBA。</p><em>FBA出单 · 提交判断</em></div>
+        <div class="gate"><strong>Jelly Mary Janes</strong><p>上架约1.6个月，核心变体销量700+与1,000+，Clothing BSR #910；是五组中很强的新品证据，但均为FBA。</p><em>FBA新品 · 提交判断</em></div>
+        <div class="gate"><strong>Jelly fisherman women</strong><p>核心变体销量50+与100+、Clothing BSR #12,177；代表 Listing 自2019年上架，属于成熟FBA证据。</p><em>成熟FBA · 提交判断</em></div>
+        <div class="gate"><strong>Jelly ballet flats women</strong><p>Listing Clothing BSR #190且6月历史销量强；当前两个核心变体各低于50，并且均为FBA，需要结合季节回落判断。</p><em>FBA出单 · 提交判断</em></div>
+      </div>
+    </section>
+
+    <section class="section" id="curves">
+      <div class="section-kicker">Monthly YoY curves</div><h2>月度流量同比曲线：同时看增长与季节形状</h2>
+      <p class="chart-note">将Sif周度搜索量按月取平均，横轴统一为1—12月，并叠加2024、2025、2026三条曲线。2026数据截至7月12日；没有非零返回值的月份留空，不按真实零需求解释。</p>
+      <div class="chart-legend"><span><i class="legend-line" style="border-color:#aab4c3"></i>2024</span><span><i class="legend-line" style="border-color:#0e7490"></i>2025</span><span><i class="legend-line" style="border-color:#2563eb"></i>2026</span></div>
+      <div id="curve-grid" class="curve-grid"></div>
+    </section>
+
+    <section class="section supporting is-collapsed">
+      <div class="section-kicker">Strict matches</div><h2>2025首次小峰，2026显著大峰</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>细分词</th><th>首次出现</th><th>2024峰值</th><th>2025峰值</th><th>2026峰值</th><th>2026 / 2025</th><th>判定</th></tr></thead>
+        <tbody>
+          <tr><td>jelly kitten heels</td><td>2025</td><td class="num">0</td><td class="num">237</td><td class="num">6,015</td><td class="num">25.4×</td><td><span class="tag tag-strong">最强增量</span></td></tr>
+          <tr><td>jelly mules</td><td>2025</td><td class="num">0</td><td class="num">792</td><td class="num">7,651</td><td class="num">9.7×</td><td><span class="tag tag-strong">强增量</span></td></tr>
+          <tr><td>jelly fisherman sandals</td><td>2025</td><td class="num">0</td><td class="num">146</td><td class="num">1,303</td><td class="num">8.9×</td><td><span class="tag tag-strong">强增量</span></td></tr>
+          <tr><td>mary jane jelly flats</td><td>2025</td><td class="num">0</td><td class="num">161</td><td class="num">1,237</td><td class="num">7.7×</td><td><span class="tag tag-strong">强增量</span></td></tr>
+          <tr><td>jelly mules for women</td><td>2025</td><td class="num">0</td><td class="num">1,141</td><td class="num">8,388</td><td class="num">7.4×</td><td><span class="tag tag-strong">规模型增量</span></td></tr>
+          <tr><td>brown jelly flats</td><td>2025</td><td class="num">0</td><td class="num">212</td><td class="num">1,257</td><td class="num">5.9×</td><td><span class="tag tag-strong">明确增量</span></td></tr>
+          <tr><td>jelly mary janes</td><td>2025</td><td class="num">0</td><td class="num">237</td><td class="num">1,267</td><td class="num">5.3×</td><td><span class="tag tag-strong">明确增量</span></td></tr>
+          <tr><td>jelly mary janes for women</td><td>2025</td><td class="num">0</td><td class="num">499</td><td class="num">2,671</td><td class="num">5.4×</td><td><span class="tag tag-strong">规模型增量</span></td></tr>
+          <tr><td>jelly slip on shoes women</td><td>2025</td><td class="num">0</td><td class="num">217</td><td class="num">1,050</td><td class="num">4.8×</td><td><span class="tag tag-strong">明确增量</span></td></tr>
+          <tr><td>clear jelly flats</td><td>2025</td><td class="num">0</td><td class="num">575</td><td class="num">1,515</td><td class="num">2.6×</td><td><span class="tag tag-watch">增量较温和</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section supporting is-collapsed">
+      <div class="section-kicker">Three-year confirmation</div><h2>从2024开始连续三年放大的词</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>细分词</th><th>2024峰值</th><th>2025峰值</th><th>2026峰值</th><th>2025 / 2024</th><th>2026 / 2025</th><th>判断</th></tr></thead>
+        <tbody>
+          <tr><td>jelly ballet flats</td><td class="num">161</td><td class="num">510</td><td class="num">1,499</td><td class="num">3.2×</td><td class="num">2.9×</td><td><span class="tag tag-strong">曲线最标准</span></td></tr>
+          <tr><td>jelly mesh flats</td><td class="num">151</td><td class="num">308</td><td class="num">868</td><td class="num">2.0×</td><td class="num">2.8×</td><td><span class="tag tag-strong">连续增长</span></td></tr>
+          <tr><td>jelly ballet flats for women</td><td class="num">515</td><td class="num">1,313</td><td class="num">2,914</td><td class="num">2.5×</td><td class="num">2.2×</td><td><span class="tag tag-strong">规模最大</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section supporting is-collapsed">
+      <div class="section-kicker">2026 watchlist</div><h2>2026才出现的新需求</h2>
+      <p class="lead">这些词缺少“2025小峰”的年度确认，因此不与严格增量词混在一起；它们代表更早期、但证据尚未完整的新信号。</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>细分词</th><th>首次出现</th><th>2026峰值</th><th>最新搜索量</th><th>观察</th></tr></thead>
+        <tbody>
+          <tr><td>tortoise jelly sandals</td><td>2026</td><td class="num">9,363</td><td class="num">3,565</td><td>规模最突出，但已从峰值回落</td></tr>
+          <tr><td>jelly loafers women</td><td>2026</td><td class="num">3,520</td><td class="num">166</td><td><span class="tag tag-watch">峰值波动大</span></td></tr>
+          <tr><td>jelly fisherman sandals for women</td><td>2026</td><td class="num">2,520</td><td class="num">1,565</td><td>峰后仍保留一定搜索量</td></tr>
+          <tr><td>jelly clogs</td><td>2026</td><td class="num">1,681</td><td class="num">540</td><td>今年新出现</td></tr>
+          <tr><td>candy colored jelly flats women</td><td>2026</td><td class="num">1,358</td><td class="num">752</td><td>今年新出现</td></tr>
+          <tr><td>jelly clogs for women</td><td>2026</td><td class="num">1,363</td><td class="num">575</td><td>与jelly clogs同步出现</td></tr>
+          <tr><td>jelly mary jane sandals women</td><td>2026</td><td class="num">1,040</td><td class="num">1,040</td><td><span class="tag tag-strong">最新值即峰值</span></td></tr>
+          <tr><td>tortoise shell jelly sandals</td><td>2026</td><td class="num">924</td><td class="num">353</td><td>同类属性需求，规模较小</td></tr>
+          <tr><td>jelly wedge sandals</td><td>2026</td><td class="num">782</td><td class="num">297</td><td>早期小规模信号</td></tr>
+          <tr><td>jelly flat sandals</td><td>2026</td><td class="num">712</td><td class="num">651</td><td><span class="tag tag-strong">最新接近峰值</span></td></tr>
+          <tr><td>jelly slip ons</td><td>2026</td><td class="num">469</td><td class="num">419</td><td>规模不大，尚未明显回落</td></tr>
+          <tr><td>jelly mary jane flats</td><td>2026</td><td class="num">419</td><td class="num">388</td><td>规模不大，最新接近峰值</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section supporting is-collapsed">
+      <div class="section-kicker">Demand clusters</div><h2>增量不是孤立长尾，而是正在形成需求簇</h2>
+      <div class="cluster-grid">
+        <div class="cluster"><h3>Mules 需求簇</h3><p><b>jelly mules</b>、<b>jelly mules for women</b>、jelly cage mule。前两词2026峰值分别为7,651和8,388，兼具规模与增速。</p></div>
+        <div class="cluster"><h3>Mary Jane 需求簇</h3><p><b>jelly mary janes</b>、jelly mary janes for women、mary jane jelly flats，以及2026新增的相关表达。多个词同步出现，簇证据最完整。</p></div>
+        <div class="cluster"><h3>Ballet / Mesh Flats 需求簇</h3><p><b>jelly ballet flats</b>、jelly ballet flats for women、jelly mesh flats。拥有最完整的2024—2026连续增长证据。</p></div>
+        <div class="cluster"><h3>Fisherman / Clogs 需求簇</h3><p>jelly fisherman sandals及其women表达，与jelly clogs相关词在2025—2026连续出现，显示需求仍在向相邻细分扩散。</p></div>
+      </div>
+    </section>
+
+    <section class="section supporting is-collapsed">
+      <div class="section-kicker">False-positive control</div><h2>主动排除的“看起来上涨、但不是新增市场”</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>关键词</th><th>排除原因</th><th>关键数据</th></tr></thead>
+        <tbody>
+          <tr><td>mesh jelly flats for women</td><td>今年没有继续增长</td><td>2025峰值383，2026峰值333</td></tr>
+          <tr><td>adult jelly shoes women</td><td>未形成逐年上升</td><td>2024峰值1,025，2025降至838</td></tr>
+          <tr><td>jelly water shoes for women</td><td>首次出现较早，增幅不够突出</td><td>2021已出现；2024/2025/2026峰值560/777/1,156</td></tr>
+          <tr><td>jelly platform sandals / jelly heels / jelly slides</td><td>属于老需求重新放大，不作为近两年新出现</td><td>首次出现时间早于2024</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-kicker">Off-site demand research</div><h2>需求从哪里来：场景、人群与外部推动因素</h2>
+      <p class="lead">站外资料显示，这轮增长不是传统儿童水鞋需求的简单回归，而是“成人时装化 + 童年/Y2K怀旧 + 夏季透明材质 + 平底鞋与低跟鞋趋势”叠加形成。以下将可核实事实与分析推断分开。</p>
+      <div class="timeline">
+        <div><b>2024</b><p><span class="evidence-label">已核实</span><br>The Row在Pre-Fall 2024展示红色编织jelly flats，将塑料凉鞋重新包装为成人奢侈时装；随后出现更低价替代款。<a class="source-link" href="https://www.vogue.com/article/2024-fashion-items-that-defined-the-year" target="_blank" rel="noopener">Vogue</a></p></div>
+        <div><b>2025</b><p><span class="evidence-label">已核实</span><br>Chloé在S/S 2025推出透明TPU kitten-heel jelly sandals；SKIMS推出SWIM Jelly Shoe，把需求连接到泳装、泳池和水鞋场景。<a class="source-link" href="https://www.vogue.com/fashion-shows/spring-2025-ready-to-wear/chloe" target="_blank" rel="noopener">Vogue Runway</a> · <a class="source-link" href="https://skims.com/products/jelly-shoe-clay" target="_blank" rel="noopener">SKIMS</a></p></div>
+        <div><b>2026</b><p><span class="evidence-label">已核实</span><br>Chloé进一步推出透明TPU jelly mules与kitten heels，并出现售罄及名人/创作者穿着；同期fisherman、mules与kitten heels被时尚媒体列为主要jelly细分。<a class="source-link" href="https://www.whowhatwear.com/fashion/luxury/chloe-jelly-mules-spring-2026" target="_blank" rel="noopener">Who What Wear</a></p></div>
+      </div>
+      <div class="research-grid">
+        <article class="research-card"><h3>Mules / Kitten heels</h3><dl><dt>使用场景</dt><dd>城市夏季穿搭、度假晚餐、派对与轻正式造型；透明材质提供“玻璃鞋”视觉，低跟/露趾又保留凉鞋属性。</dd><dt>推定人群</dt><dd>追逐秀场与名人穿搭的年轻女性、时尚从业者及愿意尝试争议鞋型的消费者。该人群为媒体与产品语境推定，不是人口统计实测。</dd><dt>推动来源</dt><dd>Chloé S/S 2026是最直接的产品信号；Arielle Charnas、Ella Richards、Maggie Rogers，以及后续Kylie Jenner等穿着构成放大链。<a class="source-link" href="https://www.marieclaire.com/fashion/celebrity-style/jelly-shoe-sandal-trend-kylie-jenner/" target="_blank" rel="noopener">Marie Claire</a></dd><dt>对应词</dt><dd>jelly mules、jelly mules for women、jelly kitten heels。</dd></dl></article>
+        <article class="research-card"><h3>Mary Jane / Ballet / Mesh flats</h3><dl><dt>使用场景</dt><dd>夏季城市通勤、日常裙装、牛仔裤与度假穿搭；消费者寻找的是比传统凉鞋更包脚、但视觉更轻透的平底鞋。</dd><dt>推定人群</dt><dd>受balletcore、mesh flats和Mary Jane复兴影响的Gen Z及年轻千禧女性；同时吸引对1980—2000年代jelly鞋有童年记忆的人群。</dd><dt>推动来源</dt><dd>The Row把jelly ballerina带入高端时装；Alaïa mesh Mary Janes与更广泛的mesh-flat趋势提供相邻审美，Amazon、Zara等低价版本扩大可得性。<a class="source-link" href="https://www.glamour.com/story/mesh-ballet-flats-trend" target="_blank" rel="noopener">Glamour</a></dd><dt>对应词</dt><dd>jelly mary janes、mary jane jelly flats、jelly ballet flats、jelly mesh flats及women变体。</dd></dl></article>
+        <article class="research-card"><h3>Fisherman / Caged</h3><dl><dt>使用场景</dt><dd>海边、泳池、夏季步行及“城市穿水鞋”的反常规造型；笼状包裹结构同时提供复古童鞋与实用水鞋联想。</dd><dt>推定人群</dt><dd>偏好Y2K/怀旧、度假穿搭和“wrong shoe”搭配的年轻消费者；亦覆盖寻找可冲洗夏季鞋的功能型人群。</dd><dt>推动来源</dt><dd>The Row的编织jelly flats和Taylor Swift早期的粉色fisherman sandals为2024提供曝光；2026时尚媒体与创作者继续把fisherman列为核心细分。<a class="source-link" href="https://www.whowhatwear.com/fashion/shoes/jelly-shoe-trends-2026" target="_blank" rel="noopener">Who What Wear</a></dd><dt>对应词</dt><dd>jelly fisherman sandals及其women变体；2026新增jelly clogs可视为相邻包裹型需求。</dd></dl></article>
+        <article class="research-card"><h3>Clear / Brown / Slip-on</h3><dl><dt>使用场景</dt><dd>clear强调透明“Cinderella”与夏季视觉；brown/tortoise把塑料材质中性化，适配牛仔与极简服装；slip-on连接泳池、海滩和快速穿脱。</dd><dt>推定人群</dt><dd>clear偏年轻、社媒与派对审美；brown/tortoise偏希望把争议材质穿得更成熟的消费者；slip-on更接近泳装与度假购买者。</dd><dt>推动来源</dt><dd>Chloé透明与棕灰色TPU款强化高级化表达；SKIMS Jelly Shoe把透明一脚蹬放进SWIM产品体系。两者更可能是品类放大器，而非每个长尾词的唯一因果来源。</dd><dt>对应词</dt><dd>clear jelly flats、brown jelly flats、jelly slip on shoes women。</dd></dl></article>
+      </div>
+      <div class="callout" style="margin-top:18px"><b>因果判断：</b>外部资料可以证明产品发布、秀场曝光、名人穿着与搜索增长在时间上高度吻合，但不能仅凭公开资料证明某一个品牌或名人是唯一原因。报告将其定义为“高可信推动因素”，而不是单一因果归因。</div>
+    </section>
+
+    <section class="section supporting is-collapsed">
+      <div class="section-kicker">Keyword-level demand map</div><h2>每个已验证细分词对应的真实需求解释</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>细分词</th><th>需求场景</th><th>推定核心人群</th><th>主要外部来源</th></tr></thead>
+        <tbody>
+          <tr><td>jelly kitten heels</td><td>夏季派对、城市轻正式、度假晚餐；透明低跟“玻璃鞋”</td><td>名人穿搭追随者、时尚型年轻女性</td><td>Chloé S/S25—S/S26秀场与名人放大</td></tr>
+          <tr><td>jelly mules</td><td>快速穿脱、牛仔裤/长裙、城市到度假的时装鞋</td><td>高时尚敏感、接受争议鞋型的女性</td><td>Chloé S/S26 Jelly Mules及创作者穿着</td></tr>
+          <tr><td>jelly mules for women</td><td>与jelly mules相同，但搜索意图更明确地锁定成人女鞋</td><td>成人女性购买者</td><td>Chloé产品与大众零售跟进</td></tr>
+          <tr><td>jelly fisherman sandals</td><td>海边、泳池、夏季步行、城市wrong-shoe造型</td><td>Y2K/怀旧消费者与度假功能型买家</td><td>The Row成人化叙事、2026编辑与创作者扩散</td></tr>
+          <tr><td>mary jane jelly flats</td><td>包脚平底、裙装/通勤、复古少女感</td><td>balletcore与Mary Jane趋势受众</td><td>Alaïa mesh Mary Jane与The Row jelly-flat审美交叉</td></tr>
+          <tr><td>jelly mary janes</td><td>夏季城市穿搭、复古制服感、平底日常</td><td>Gen Z及年轻千禧女性</td><td>Mary Jane复兴叠加jelly材质复兴</td></tr>
+          <tr><td>jelly mary janes for women</td><td>明确成人女鞋意图，弱化传统儿童jelly鞋联想</td><td>成年女性日常/通勤购买者</td><td>高端Mary Jane与大众版本共同扩散</td></tr>
+          <tr><td>brown jelly flats</td><td>中性色城市穿搭，搭配牛仔、亚麻与极简服装</td><td>希望把塑料鞋穿得更成熟的人群</td><td>Chloé棕灰透明款及tortoise/brown配色扩散</td></tr>
+          <tr><td>jelly slip on shoes women</td><td>泳池、海滩、旅行与快速穿脱</td><td>度假/泳装消费者及便利导向买家</td><td>SKIMS SWIM Jelly Shoe与大众一脚蹬供给</td></tr>
+          <tr><td>clear jelly flats</td><td>透明Cinderella视觉、派对与夏季轻盈穿搭</td><td>社媒审美、年轻时尚消费者</td><td>Chloé透明TPU与名人穿着</td></tr>
+          <tr><td>jelly ballet flats</td><td>夏季城市平底鞋、裙装、牛仔裤和度假</td><td>balletcore、平底鞋与怀旧趋势受众</td><td>The Row Mara、Ancient Greek Sandals及低价替代款</td></tr>
+          <tr><td>jelly mesh flats</td><td>视觉轻透的城市平底鞋，强调透气感与网格外观</td><td>mesh-flat趋势追随者</td><td>Alaïa mesh flats与The Row编织jelly审美叠加</td></tr>
+          <tr><td>jelly ballet flats for women</td><td>成人女鞋、夏季通勤和日常平底替代</td><td>成年女性及平底鞋高频使用者</td><td>The Row高端示范、时尚媒体与大众零售扩散</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Decision boundary</div><h2>V2.3 的结论边界</h2>
+      <div class="callout"><b>已经回答：</b>13个增量词全部进入候选池；4个池内词和1个2026观察词已完成Amazon首页48位有效同款初筛，并完成代表 Listing 前两个核心变体的销量、BSR、上架时间与履约核验。五组均有BSR #100万以内的出单证据，但本轮10个核心变体全部为FBA，所以统一输出“提交判断”。<br><b>下一步要做：</b>对其余9个池内词逐词完成首页有效同款审核；有同款时按同一规则继续核验两个核心变体，优先寻找上架1—2个月且由FBM或Amazon自营实现BSR #100万以内的新品证据。<br><b>仍不在本阶段判断：</b>利润、成本、CPC、最终款式和供应链可行性。</div>
+    </section>
+
+    <section class="method">
+      <b>数据口径与方法</b>
+      <ul>
+        <li>候选词来源：Sif MCP <code>market_get_asin_keyword_signals</code>，8个头部及最新点击ASIN，每个最多返回300个流量词。</li>
+        <li>曲线验证：Sif MCP <code>market_get_keyword_history</code>，US站、week粒度，对40个候选细分词逐词回查。</li>
+        <li>流量竞争：Sif MCP <code>market_get_keyword_competition</code>继续用于读取Top3点击与转化集中度，但不再把Sif流量ASIN样本当成Amazon首页供给分母。</li>
+        <li>候选池：13个曲线确认词全部进入第一层审核；此前5个前台样本是已取得快照的代表样本，不是机会Top 5。其中fisherman women属于2026观察词，因此池内已完成首页初筛的是4个。</li>
+        <li>首页供给：2026-07-27在Amazon US分别搜索5个样本词，以页面显示的首页1—48位为统一口径；结果会随时间、位置、广告与个性化变化。</li>
+        <li>有效同款定义：产品必须同时满足目标人群、jelly/PVC/TPU表达、指定鞋型，并在图片视觉上响应已调研的买家场景与设计预期；未能确认的产品不计入。</li>
+        <li>代表 Listing：从关键词竞争结果中选择语义与图片均符合真实需求的有效同款；不把仅有流量但商品错配的ASIN当作同款。</li>
+        <li>核心变体：使用 Sif MCP <code>ops_get_listing_traffic_structure</code>读取 Listing 近30天流量结构，按流量份额取前两个变体；不以任意父体或低流量变体代替。</li>
+        <li>出单能力：使用 Sif MCP <code>ops_get_asin_sales_list</code>核验两个核心变体近30天销量；Clothing BSR、Date First Available、Ships from 与 Sold by 来自2026-07-27 Amazon详情页快照。</li>
+        <li>履约判断：第三方卖家且 Amazon 配送记为FBA；若两个核心变体均为FBA，则该代表 Listing 记为FBA主导。上架阶段同样以这两个核心变体的 Date First Available 为准。</li>
+        <li>决策树：无同款或极少且上架≤1周可直接上架；否则核验同款 Clothing BSR、上架时间及FBA/FBM。所有同款BSR&gt;#100万则放弃；FBM/Amazon近期新品出单加分；仅FBA出单则提交判断。本轮5组样本均落入最后一种。</li>
+        <li>需供比：宽口径＝月搜索量÷Amazon Results；有效口径＝月搜索量÷有效同款初筛数。比值用于相对比较，不替代同款出单验证。</li>
+        <li>Top3集中度：点击/转化份额来自Sif竞争工具；份额低只说明购买与流量分散，必须与商品匹配证据结合，不能单独等同于供给空白。</li>
+        <li>月度曲线：将同一自然月内的周度搜索量取算术平均，分别叠加2024、2025、2026；缺少非零返回值的月份留空。报告明确将其标记为“月均周搜索量”，不等同于月搜索量。</li>
+        <li>“首次出现”：Sif返回的ABA周度搜索量序列中第一次出现非零值的年份。</li>
+        <li>“年度峰值”：该自然年内最高一周的ABA搜索量。2026为截至2026-07-12的年内数据。</li>
+        <li>站外需求研究：综合秀场/产品页面、主流时尚媒体和公开名人穿着报道。人群画像为基于这些语境的分析推定，不等同于Amazon后台人口统计数据。</li>
+      </ul>
+    </section>
+    <section class="section" id="changelog">
+      <div class="section-kicker">Version history</div><h2>版本迭代记录</h2>
+      <div class="changelog">
+        <div class="change-row"><b>V1</b><p>建立增量市场框架：从 jelly shoes 词根下筛选近两年出现、逐年抬升的细分词，并加入月度流量曲线与站外需求来源研究。</p></div>
+        <div class="change-row"><b>V2</b><p>加入Amazon前台商品与搜索需求的语义、图片视觉匹配审核，将“结果很多但有效同款很少”识别为潜在供给错配。</p></div>
+        <div class="change-row"><b>V2.1</b><p>修复“查看机会结论”交互；用“产品上首页难度”替代抽象的错配表述，并对5个代表词完成首页48位初筛。</p></div>
+        <div class="change-row"><b>V2.2</b><p>扩展为13个增量候选词；加入宽口径/有效需供比、同款竞品决策树、候选阶段筛选与可读性优化。</p></div>
+        <div class="change-row"><b>V2.3</b><p>按Sif流量份额选取每个代表 Listing 的两个核心变体，补齐近30天销量、Clothing BSR、上架时间和FBA/FBM核验；五组当前均输出“提交判断”。</p></div>
+      </div>
+    </section>
+    <footer class="footer"><span>Jelly Shoes 增量市场机会挖掘报告</span><span>V2.3 · 2026-07-27</span></footer>
+  </main>
+</article>
+<script>
+  const curves=[
+    {k:'jelly kitten heels',m:{'2025-05':149,'2025-06':155,'2025-07':207,'2025-08':131,'2026-02':257,'2026-03':917,'2026-04':2154,'2026-05':3652,'2026-06':4937,'2026-07':3949}},
+    {k:'jelly mules',m:{'2025-03':233,'2025-04':372,'2025-05':610,'2025-06':601,'2025-07':437,'2025-08':258,'2025-09':242,'2025-10':134,'2026-01':199,'2026-02':433,'2026-03':2220,'2026-04':3125,'2026-05':4892,'2026-06':5088,'2026-07':3907}},
+    {k:'jelly mules for women',m:{'2025-02':156,'2025-03':416,'2025-04':519,'2025-05':659,'2025-06':848,'2025-07':671,'2025-08':403,'2025-09':184,'2025-10':136,'2026-01':150,'2026-02':543,'2026-03':3194,'2026-04':4777,'2026-05':6113,'2026-06':5938,'2026-07':4421}},
+    {k:'jelly fisherman sandals',m:{'2025-05':131,'2025-06':136,'2026-03':131,'2026-04':149,'2026-05':429,'2026-06':934,'2026-07':831}},
+    {k:'mary jane jelly flats',m:{'2025-07':161,'2026-03':437,'2026-04':572,'2026-05':598,'2026-06':648,'2026-07':821}},
+    {k:'jelly mary janes',m:{'2025-06':131,'2025-07':181,'2025-08':164,'2025-09':141,'2026-02':183,'2026-03':440,'2026-04':699,'2026-05':976,'2026-06':924,'2026-07':757}},
+    {k:'jelly mary janes for women',m:{'2025-03':199,'2025-04':204,'2025-05':353,'2025-06':436,'2025-07':386,'2025-08':256,'2025-09':190,'2026-02':389,'2026-03':1267,'2026-04':1607,'2026-05':1960,'2026-06':2064,'2026-07':1987}},
+    {k:'brown jelly flats',note:'2025活跃在9—10月；2026提前至2—7月，暂无同月基线',m:{'2025-09':185,'2025-10':171,'2026-02':149,'2026-03':365,'2026-04':997,'2026-05':1160,'2026-06':767,'2026-07':523}},
+    {k:'jelly slip on shoes women',m:{'2025-04':191,'2025-05':181,'2025-06':206,'2025-07':158,'2025-08':146,'2026-03':368,'2026-04':592,'2026-05':635,'2026-06':832,'2026-07':810}},
+    {k:'clear jelly flats',m:{'2025-04':176,'2025-05':246,'2025-06':423,'2025-07':443,'2025-08':343,'2025-09':248,'2025-10':175,'2026-01':126,'2026-02':386,'2026-03':896,'2026-04':1272,'2026-05':1416,'2026-06':1194,'2026-07':742}},
+    {k:'jelly ballet flats',m:{'2024-06':132,'2024-07':147,'2025-03':131,'2025-04':198,'2025-05':366,'2025-06':340,'2025-07':361,'2025-08':219,'2025-09':170,'2025-10':200,'2026-01':166,'2026-02':245,'2026-03':611,'2026-04':691,'2026-05':1098,'2026-06':1033,'2026-07':833}},
+    {k:'jelly mesh flats',m:{'2024-06':136,'2024-07':151,'2025-04':174,'2025-05':235,'2025-06':200,'2025-07':199,'2025-08':184,'2025-09':207,'2026-02':197,'2026-03':348,'2026-04':494,'2026-05':699,'2026-06':727,'2026-07':462}},
+    {k:'jelly ballet flats for women',m:{'2024-04':126,'2024-05':204,'2024-06':298,'2024-07':391,'2024-08':265,'2024-09':161,'2025-02':151,'2025-03':332,'2025-04':632,'2025-05':974,'2025-06':1048,'2025-07':815,'2025-08':457,'2025-09':163,'2026-02':341,'2026-03':1102,'2026-04':1491,'2026-05':1761,'2026-06':2204,'2026-07':1588}}
+  ];
+  const grid=document.getElementById('curve-grid'),ns='http://www.w3.org/2000/svg',fmt=n=>n==null?'—':n.toLocaleString('en-US');
+  const years=[2024,2025,2026],colors={2024:'#aab4c3',2025:'#0e7490',2026:'#2563eb'};
+  const auditedTerms=new Set(['jelly kitten heels','jelly mules for women','jelly mary janes for women','jelly ballet flats for women']);
+  curves.forEach((s,index)=>{
+    const box=document.createElement('div');box.className='curve';box.dataset.status=auditedTerms.has(s.k)?'audited':'pending';box.dataset.index=index;
+    const h=document.createElement('h3');h.textContent=s.k;box.appendChild(h);
+    const pairs=[];for(let m=1;m<=7;m++){const mm=String(m).padStart(2,'0'),a=s.m[`2025-${mm}`],b=s.m[`2026-${mm}`];if(a&&b)pairs.push(b/a)}
+    const r=document.createElement('div');r.className='ratio';r.textContent=s.note||(pairs.length?`所有可比月份同比增长 ${Math.min(...pairs).toFixed(1)}—${Math.max(...pairs).toFixed(1)}×`:'2026新出现，暂无同月基线');box.appendChild(r);
+    const svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 500 226');svg.setAttribute('role','img');svg.setAttribute('aria-label',`${s.k} 2024至2026月均周搜索量同比曲线`);
+    const vals=Object.values(s.m),max=Math.max(...vals)*1.12,x=m=>42+(m-1)*40,y=v=>184-(v/max)*150;
+    const add=(tag,a)=>{const e=document.createElementNS(ns,tag);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));svg.appendChild(e);return e};
+    [0,.5,1].forEach(p=>{const gy=184-p*150;add('line',{class:'gridline',x1:42,y1:gy,x2:482,y2:gy});const t=add('text',{x:37,y:gy+3,'text-anchor':'end'});t.textContent=fmt(Math.round(max*p))});
+    for(let m=1;m<=12;m++){if(m===1||m%2===0){const t=add('text',{x:x(m),y:207,'text-anchor':'middle'});t.textContent=m+'月'}}
+    years.forEach(yr=>{let d='',drawing=false;for(let m=1;m<=12;m++){const v=s.m[`${yr}-${String(m).padStart(2,'0')}`];if(v==null){drawing=false;continue}d+=(drawing?'L':'M')+x(m)+','+y(v)+' ';drawing=true}if(d)add('path',{class:'line',d,stroke:colors[yr]});for(let m=1;m<=12;m++){const v=s.m[`${yr}-${String(m).padStart(2,'0')}`];if(v!=null)add('circle',{class:'dot',cx:x(m),cy:y(v),r:3,fill:colors[yr]})}});
+    const cursor=add('line',{x1:42,y1:28,x2:42,y2:184,stroke:'#637083','stroke-width':1,'stroke-dasharray':'3 3',visibility:'hidden'});
+    const hit=add('rect',{x:42,y:24,width:440,height:164,fill:'transparent'});
+    const read=document.createElement('div');read.className='readout';read.textContent='移动鼠标或在顶部选择月份查看数值';
+    hit.addEventListener('mousemove',e=>{const rect=svg.getBoundingClientRect(),sx=(e.clientX-rect.left)*500/rect.width,m=Math.max(1,Math.min(12,Math.round((sx-42)/40)+1));cursor.setAttribute('x1',x(m));cursor.setAttribute('x2',x(m));cursor.setAttribute('visibility','visible');read.textContent=`${m}月｜2024 ${fmt(s.m[`2024-${String(m).padStart(2,'0')}`])}｜2025 ${fmt(s.m[`2025-${String(m).padStart(2,'0')}`])}｜2026 ${fmt(s.m[`2026-${String(m).padStart(2,'0')}`])}`});
+    hit.addEventListener('mouseleave',()=>{cursor.setAttribute('visibility','hidden');if(document.getElementById('month-select').value==='0')read.textContent='移动鼠标或在顶部选择月份查看数值'});
+    box.append(svg,read);grid.appendChild(box);
+  });
+
+  const profiles={
+    mules:{title:'jelly mules for women',fit:'27 / 48',rate:'56.3%',visual:'中—高',action:'提交判断',copy:'核心变体销量800+与1,000+、Clothing BSR #1,119，证明确有出单能力。',visualNote:'两个核心变体均为FBA，且上架已超过2个月；按规则提交判断，不能作为FBM新品可复制证据。'},
+    mary:{title:'jelly mary janes for women',fit:'25 / 48',rate:'52.1%',visual:'高',action:'FBA新品 · 提交判断',copy:'核心变体上架约1.6个月，销量700+与1,000+、Clothing BSR #910。',visualNote:'这是明确的新品出单加分信号；但两个核心变体均为FBA，因此提交判断。'},
+    fisherman:{title:'jelly fisherman sandals for women',fit:'14 / 48',rate:'29.2%',visual:'高',action:'成熟FBA · 提交判断',copy:'核心变体销量50+与100+、Clothing BSR #12,177，属于“少而能卖”。',visualNote:'代表 Listing 自2019年上架且两个核心变体均为FBA，不属于近期新品快速验证证据。'},
+    ballet:{title:'jelly ballet flats for women',fit:'31 / 48',rate:'64.6%',visual:'高',action:'提交判断',copy:'代表 Listing Clothing BSR #190，两个核心变体6月历史销量明显。',visualNote:'当前两个核心变体销量均低于50且全部FBA；需结合季节回落提交判断。'},
+    kitten:{title:'jelly kitten heels',fit:'30 / 48',rate:'62.5%',visual:'中—高',action:'FBA新品 · 提交判断',copy:'核心变体上架约1.8个月，销量200+与100+、Clothing BSR #37,090。',visualNote:'新品出单证据成立，但两个核心变体均为FBA；视觉差异化仍需单独验证。'}
+  };
+  const profileIds={title:'inspect-title',fit:'inspect-fit',rate:'inspect-rate',visual:'inspect-visual',action:'inspect-action',copy:'inspect-copy',visualNote:'inspect-visual-note'};
+  const difficultyDialog=document.getElementById('difficulty-dialog');
+  function selectProfile(key){
+    const p=profiles[key];if(!p)return;
+    Object.entries(profileIds).forEach(([field,id])=>document.getElementById(id).textContent=p[field]);
+    document.querySelectorAll('.audit-card[data-key]').forEach(card=>card.classList.toggle('is-selected',card.dataset.key===key));
+    if(typeof difficultyDialog.showModal==='function')difficultyDialog.showModal();else difficultyDialog.setAttribute('open','');
+  }
+  document.querySelectorAll('[data-inspect]').forEach(button=>button.addEventListener('click',()=>selectProfile(button.dataset.inspect)));
+  document.getElementById('dialog-close').addEventListener('click',()=>difficultyDialog.close());
+  difficultyDialog.addEventListener('click',event=>{if(event.target===difficultyDialog)difficultyDialog.close()});
+
+  document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+    const filter=button.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(item=>{const active=item===button;item.classList.toggle('is-active',active);item.setAttribute('aria-pressed',String(active))});
+    document.querySelectorAll('.candidate-row[data-stage]').forEach(item=>item.classList.toggle('is-hidden',filter!=='all'&&item.dataset.stage!==filter));
+  }));
+
+  document.querySelectorAll('.supporting').forEach(section=>{
+    const button=document.createElement('button');button.type='button';button.className='section-toggle';
+    const update=()=>{const collapsed=section.classList.contains('is-collapsed');button.textContent=collapsed?'展开详细证据':'收起详细证据';button.setAttribute('aria-expanded',String(!collapsed))};
+    update();section.querySelector('h2').after(button);button.addEventListener('click',()=>{section.classList.toggle('is-collapsed');update()});
+  });
+
+  document.getElementById('month-select').addEventListener('change',event=>{
+    const month=Number(event.target.value);
+    document.querySelectorAll('.curve').forEach(box=>{
+      const read=box.querySelector('.readout'),s=curves[Number(box.dataset.index)];
+      if(!month){read.textContent='移动鼠标或在顶部选择月份查看数值';return}
+      const mm=String(month).padStart(2,'0');read.textContent=`${month}月｜2024 ${fmt(s.m[`2024-${mm}`])}｜2025 ${fmt(s.m[`2025-${mm}`])}｜2026 ${fmt(s.m[`2026-${mm}`])}`;
+    });
+  });
+  document.getElementById('print-report').addEventListener('click',()=>window.print());
+</script>
+</body>
+</html>
