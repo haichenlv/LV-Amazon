@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jelly Shoes 增量市场机会挖掘报告 V1.1</title>
+  <style>
+    :root{--ink:#172033;--muted:#637083;--line:#dfe5ec;--soft:#f5f7fa;--navy:#13243c;--blue:#2563eb;--cyan:#0e7490;--green:#177245;--green-soft:#eaf7f0;--amber:#a15c00;--amber-soft:#fff7e7;--red:#a83b3b;--white:#fff;--shadow:0 14px 40px rgba(23,32,51,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eef2f6;color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",Arial,sans-serif;line-height:1.65}
+    .report{max-width:1120px;margin:0 auto;background:var(--white);box-shadow:var(--shadow);min-height:100vh}.hero{padding:56px 64px 46px;background:linear-gradient(135deg,#0f1f35,#17375d 62%,#0d6b83);color:#fff}
+    .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.72}.hero h1{font-size:38px;line-height:1.22;margin:12px 0 14px;font-weight:700}.hero p{max-width:820px;margin:0;color:rgba(255,255,255,.84);font-size:17px}.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.pill{border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:5px 11px;font-size:12px;color:rgba(255,255,255,.88)}
+    main{padding:42px 64px 70px}.section{margin-top:44px}.section:first-child{margin-top:0}.section-kicker{font-size:12px;color:var(--blue);letter-spacing:.12em;text-transform:uppercase;font-weight:700}.section h2{font-size:25px;line-height:1.3;margin:7px 0 18px}.lead{font-size:17px;color:#354158;max-width:900px}.verdict{border-left:5px solid var(--green);background:var(--green-soft);padding:22px 26px;border-radius:0 12px 12px 0;font-size:18px}.verdict strong{color:#0f6038}.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}.metric{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:17px}.metric span{display:block;color:var(--muted);font-size:12px}.metric b{display:block;font-size:25px;line-height:1.2;margin:5px 0}.metric small{color:var(--muted)}
+    .callout{background:var(--amber-soft);border:1px solid #f3ddb0;border-radius:12px;padding:16px 19px;color:#66430d}.chart-note{font-size:13px;color:var(--muted);margin:-10px 0 18px}.chart-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:0 0 16px}.legend-line{display:inline-block;width:20px;border-top:3px solid;margin-right:6px;vertical-align:middle}.curve-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.curve{border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px;background:#fff}.curve h3{font-size:14px;margin:0}.curve .ratio{font-size:12px;color:var(--green);margin:2px 0 3px;font-weight:700}.curve svg{display:block;width:100%;height:auto}.curve .axis,.curve .gridline{stroke:#d6dde6;stroke-width:1}.curve .gridline{stroke-dasharray:2 4}.curve .line{fill:none;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}.curve .dot{stroke:#fff;stroke-width:1}.curve text{font-family:inherit;font-size:9px;fill:var(--muted)}.curve .readout{min-height:20px;font-size:11px;color:var(--muted);text-align:center}.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.research-card{border:1px solid var(--line);border-radius:12px;padding:19px}.research-card h3{margin:0 0 10px;font-size:17px}.research-card dl{margin:0;display:grid;grid-template-columns:82px 1fr;gap:8px 10px;font-size:13px}.research-card dt{font-weight:700;color:#3d4a5e}.research-card dd{margin:0;color:#536075}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.timeline>div{border-top:4px solid var(--blue);background:var(--soft);padding:15px;border-radius:8px}.timeline b{display:block;font-size:20px}.timeline p{font-size:13px;margin:5px 0 0;color:#536075}.source-link{color:var(--blue);text-decoration:none;border-bottom:1px solid #b9cef9}.evidence-label{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan)}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;font-size:13px}th{background:#f2f5f8;color:#3f4d61;text-align:left;padding:11px 12px;white-space:nowrap}td{padding:11px 12px;border-top:1px solid var(--line);vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.tag{display:inline-block;border-radius:999px;padding:2px 8px;font-size:11px;font-weight:700;white-space:nowrap}.tag-strong{background:#e6f5ed;color:#12633a}.tag-watch{background:#fff1d6;color:#855000}.tag-no{background:#f2f4f7;color:#566273}
+    .cluster-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.cluster{border-top:3px solid var(--cyan);background:var(--soft);padding:18px;border-radius:10px}.cluster h3{font-size:16px;margin:0 0 7px}.cluster p{margin:0;color:#536075;font-size:13px}.cluster b{color:var(--ink)}
+    .ranking{counter-reset:item;display:grid;gap:10px}.rank-item{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:11px 0}.rank-item:before{counter-increment:item;content:counter(item);width:31px;height:31px;display:grid;place-items:center;background:var(--navy);color:#fff;border-radius:50%;font-size:13px}.rank-item b{font-size:15px}.rank-item span{color:var(--muted);font-size:13px}.rank-item em{font-style:normal;font-size:12px;color:var(--green);font-weight:700}
+    .method{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:48px;padding-top:22px}.method ul{margin:8px 0 0;padding-left:20px}.footer{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+    @media(max-width:820px){.hero,main{padding-left:28px;padding-right:28px}.hero h1{font-size:30px}.metric-grid{grid-template-columns:repeat(2,1fr)}.curve-grid,.research-grid{grid-template-columns:1fr}.cluster-grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}}
+    @media(max-width:520px){.hero,main{padding-left:18px;padding-right:18px}.hero{padding-top:38px}.hero h1{font-size:26px}.metric-grid,.curve-grid{grid-template-columns:1fr}.rank-item{grid-template-columns:36px 1fr}.rank-item em{grid-column:2}.footer{display:block}}
+    @media print{body{background:#fff}.report{max-width:none;box-shadow:none}.hero{print-color-adjust:exact;-webkit-print-color-adjust:exact}.section{break-inside:avoid}.curve{break-inside:avoid}.table-wrap{overflow:visible}}
+  </style>
+</head>
+<body>
+<article class="report">
+  <header class="hero">
+    <div class="eyebrow">Amazon US · Incremental Demand Discovery</div>
+    <h1>Jelly Shoes 增量市场机会挖掘报告</h1>
+    <p>不是判断主词是否够大，而是验证词根内部是否出现“2024弱或无、2025首次小峰、2026显著大峰”的新增细分需求。</p>
+    <div class="meta"><span class="pill">版本 V1.1</span><span class="pill">站点 US</span><span class="pill">原始粒度 Week / 展示粒度 Month</span><span class="pill">数据源 Sif MCP + 站外调研</span><span class="pill">数据截至 2026-07-12</span></div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="section-kicker">Executive verdict</div><h2>结论：词根下存在已被曲线证实的增量市场</h2>
+      <div class="verdict"><strong>明确存在。</strong> 本轮发现多组符合目标形态的细分词，其中 <b>jelly mules</b>、<b>jelly mary janes</b>、<b>jelly ballet / mesh flats</b> 与 <b>jelly kitten heels</b> 的增量证据最强。它们不是主词同步上涨的简单复述，而是在首次出现时间、年度波峰和增长倍数上形成了独立证据。</div>
+      <div class="metric-grid">
+        <div class="metric"><span>候选来源</span><b>8 个 ASIN</b><small>头部及最新点击ASIN</small></div>
+        <div class="metric"><span>回查候选词</span><b>40 个</b><small>逐词拉取周度历史</small></div>
+        <div class="metric"><span>严格增量词</span><b>10 个</b><small>2025首次出现并于2026放大</small></div>
+        <div class="metric"><span>连续增长词</span><b>3 个</b><small>2024→2025→2026连续抬升</small></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Monthly YoY curves</div><h2>月度流量同比曲线：同时看增长与季节形状</h2>
+      <p class="chart-note">将Sif周度搜索量按月取平均，横轴统一为1—12月，并叠加2024、2025、2026三条曲线。2026数据截至7月12日；没有非零返回值的月份留空，不按真实零需求解释。</p>
+      <div class="chart-legend"><span><i class="legend-line" style="border-color:#aab4c3"></i>2024</span><span><i class="legend-line" style="border-color:#0e7490"></i>2025</span><span><i class="legend-line" style="border-color:#2563eb"></i>2026</span></div>
+      <div id="curve-grid" class="curve-grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Strict matches</div><h2>2025首次小峰，2026显著大峰</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>细分词</th><th>首次出现</th><th>2024峰值</th><th>2025峰值</th><th>2026峰值</th><th>2026 / 2025</th><th>判定</th></tr></thead>
+        <tbody>
+          <tr><td>jelly kitten heels</td><td>2025</td><td class="num">0</td><td class="num">237</td><td class="num">6,015</td><td class="num">25.4×</td><td><span class="tag tag-strong">最强增量</span></td></tr>
+          <tr><td>jelly mules</td><td>2025</td><td class="num">0</td><td class="num">792</td><td class="num">7,651</td><td class="num">9.7×</td><td><span class="tag tag-strong">强增量</span></td></tr>
+          <tr><td>jelly fisherman sandals</td><td>2025</td><td class="num">0</td><td class="num">146</td><td class="num">1,303</td><td class="num">8.9×</td><td><span class="tag tag-strong">强增量</span></td></tr>
+          <tr><td>mary jane jelly flats</td><td>2025</td><td class="num">0</td><td class="num">161</td><td class="num">1,237</td><td class="num">7.7×</td><td><span class="tag tag-strong">强增量</span></td></tr>
+          <tr><td>jelly mules for women</td><td>2025</td><td class="num">0</td><td class="num">1,141</td><td class="num">8,388</td><td class="num">7.4×</td><td><span class="tag tag-strong">规模型增量</span></td></tr>
+          <tr><td>brown jelly flats</td><td>2025</td><td class="num">0</td><td class="num">212</td><td class="num">1,257</td><td class="num">5.9×</td><td><span class="tag tag-strong">明确增量</span></td></tr>
+          <tr><td>jelly mary janes</td><td>2025</td><td class="num">0</td><td class="num">237</td><td class="num">1,267</td><td class="num">5.3×</td><td><span class="tag tag-strong">明确增量</span></td></tr>
+          <tr><td>jelly mary janes for women</td><td>2025</td><td class="num">0</td><td class="num">499</td><td class="num">2,671</td><td class="num">5.4×</td><td><span class="tag tag-strong">规模型增量</span></td></tr>
+          <tr><td>jelly slip on shoes women</td><td>2025</td><td class="num">0</td><td class="num">217</td><td class="num">1,050</td><td class="num">4.8×</td><td><span class="tag tag-strong">明确增量</span></td></tr>
+          <tr><td>clear jelly flats</td><td>2025</td><td class="num">0</td><td class="num">575</td><td class="num">1,515</td><td class="num">2.6×</td><td><span class="tag tag-watch">增量较温和</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Three-year confirmation</div><h2>从2024开始连续三年放大的词</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>细分词</th><th>2024峰值</th><th>2025峰值</th><th>2026峰值</th><th>2025 / 2024</th><th>2026 / 2025</th><th>判断</th></tr></thead>
+        <tbody>
+          <tr><td>jelly ballet flats</td><td class="num">161</td><td class="num">510</td><td class="num">1,499</td><td class="num">3.2×</td><td class="num">2.9×</td><td><span class="tag tag-strong">曲线最标准</span></td></tr>
+          <tr><td>jelly mesh flats</td><td class="num">151</td><td class="num">308</td><td class="num">868</td><td class="num">2.0×</td><td class="num">2.8×</td><td><span class="tag tag-strong">连续增长</span></td></tr>
+          <tr><td>jelly ballet flats for women</td><td class="num">515</td><td class="num">1,313</td><td class="num">2,914</td><td class="num">2.5×</td><td class="num">2.2×</td><td><span class="tag tag-strong">规模最大</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">2026 watchlist</div><h2>2026才出现的新需求</h2>
+      <p class="lead">这些词缺少“2025小峰”的年度确认，因此不与严格增量词混在一起；它们代表更早期、但证据尚未完整的新信号。</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>细分词</th><th>首次出现</th><th>2026峰值</th><th>最新搜索量</th><th>观察</th></tr></thead>
+        <tbody>
+          <tr><td>tortoise jelly sandals</td><td>2026</td><td class="num">9,363</td><td class="num">3,565</td><td>规模最突出，但已从峰值回落</td></tr>
+          <tr><td>jelly loafers women</td><td>2026</td><td class="num">3,520</td><td class="num">166</td><td><span class="tag tag-watch">峰值波动大</span></td></tr>
+          <tr><td>jelly fisherman sandals for women</td><td>2026</td><td class="num">2,520</td><td class="num">1,565</td><td>峰后仍保留一定搜索量</td></tr>
+          <tr><td>jelly clogs</td><td>2026</td><td class="num">1,681</td><td class="num">540</td><td>今年新出现</td></tr>
+          <tr><td>candy colored jelly flats women</td><td>2026</td><td class="num">1,358</td><td class="num">752</td><td>今年新出现</td></tr>
+          <tr><td>jelly clogs for women</td><td>2026</td><td class="num">1,363</td><td class="num">575</td><td>与jelly clogs同步出现</td></tr>
+          <tr><td>jelly mary jane sandals women</td><td>2026</td><td class="num">1,040</td><td class="num">1,040</td><td><span class="tag tag-strong">最新值即峰值</span></td></tr>
+          <tr><td>tortoise shell jelly sandals</td><td>2026</td><td class="num">924</td><td class="num">353</td><td>同类属性需求，规模较小</td></tr>
+          <tr><td>jelly wedge sandals</td><td>2026</td><td class="num">782</td><td class="num">297</td><td>早期小规模信号</td></tr>
+          <tr><td>jelly flat sandals</td><td>2026</td><td class="num">712</td><td class="num">651</td><td><span class="tag tag-strong">最新接近峰值</span></td></tr>
+          <tr><td>jelly slip ons</td><td>2026</td><td class="num">469</td><td class="num">419</td><td>规模不大，尚未明显回落</td></tr>
+          <tr><td>jelly mary jane flats</td><td>2026</td><td class="num">419</td><td class="num">388</td><td>规模不大，最新接近峰值</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Demand clusters</div><h2>增量不是孤立长尾，而是正在形成需求簇</h2>
+      <div class="cluster-grid">
+        <div class="cluster"><h3>Mules 需求簇</h3><p><b>jelly mules</b>、<b>jelly mules for women</b>、jelly cage mule。前两词2026峰值分别为7,651和8,388，兼具规模与增速。</p></div>
+        <div class="cluster"><h3>Mary Jane 需求簇</h3><p><b>jelly mary janes</b>、jelly mary janes for women、mary jane jelly flats，以及2026新增的相关表达。多个词同步出现，簇证据最完整。</p></div>
+        <div class="cluster"><h3>Ballet / Mesh Flats 需求簇</h3><p><b>jelly ballet flats</b>、jelly ballet flats for women、jelly mesh flats。拥有最完整的2024—2026连续增长证据。</p></div>
+        <div class="cluster"><h3>Fisherman / Clogs 需求簇</h3><p>jelly fisherman sandals及其women表达，与jelly clogs相关词在2025—2026连续出现，显示需求仍在向相邻细分扩散。</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">False-positive control</div><h2>主动排除的“看起来上涨、但不是新增市场”</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>关键词</th><th>排除原因</th><th>关键数据</th></tr></thead>
+        <tbody>
+          <tr><td>mesh jelly flats for women</td><td>今年没有继续增长</td><td>2025峰值383，2026峰值333</td></tr>
+          <tr><td>adult jelly shoes women</td><td>未形成逐年上升</td><td>2024峰值1,025，2025降至838</td></tr>
+          <tr><td>jelly water shoes for women</td><td>首次出现较早，增幅不够突出</td><td>2021已出现；2024/2025/2026峰值560/777/1,156</td></tr>
+          <tr><td>jelly platform sandals / jelly heels / jelly slides</td><td>属于老需求重新放大，不作为近两年新出现</td><td>首次出现时间早于2024</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Off-site demand research</div><h2>需求从哪里来：场景、人群与外部推动因素</h2>
+      <p class="lead">站外资料显示，这轮增长不是传统儿童水鞋需求的简单回归，而是“成人时装化 + 童年/Y2K怀旧 + 夏季透明材质 + 平底鞋与低跟鞋趋势”叠加形成。以下将可核实事实与分析推断分开。</p>
+      <div class="timeline">
+        <div><b>2024</b><p><span class="evidence-label">已核实</span><br>The Row在Pre-Fall 2024展示红色编织jelly flats，将塑料凉鞋重新包装为成人奢侈时装；随后出现更低价替代款。<a class="source-link" href="https://www.vogue.com/article/2024-fashion-items-that-defined-the-year" target="_blank" rel="noopener">Vogue</a></p></div>
+        <div><b>2025</b><p><span class="evidence-label">已核实</span><br>Chloé在S/S 2025推出透明TPU kitten-heel jelly sandals；SKIMS推出SWIM Jelly Shoe，把需求连接到泳装、泳池和水鞋场景。<a class="source-link" href="https://www.vogue.com/fashion-shows/spring-2025-ready-to-wear/chloe" target="_blank" rel="noopener">Vogue Runway</a> · <a class="source-link" href="https://skims.com/products/jelly-shoe-clay" target="_blank" rel="noopener">SKIMS</a></p></div>
+        <div><b>2026</b><p><span class="evidence-label">已核实</span><br>Chloé进一步推出透明TPU jelly mules与kitten heels，并出现售罄及名人/创作者穿着；同期fisherman、mules与kitten heels被时尚媒体列为主要jelly细分。<a class="source-link" href="https://www.whowhatwear.com/fashion/luxury/chloe-jelly-mules-spring-2026" target="_blank" rel="noopener">Who What Wear</a></p></div>
+      </div>
+      <div class="research-grid">
+        <article class="research-card"><h3>Mules / Kitten heels</h3><dl><dt>使用场景</dt><dd>城市夏季穿搭、度假晚餐、派对与轻正式造型；透明材质提供“玻璃鞋”视觉，低跟/露趾又保留凉鞋属性。</dd><dt>推定人群</dt><dd>追逐秀场与名人穿搭的年轻女性、时尚从业者及愿意尝试争议鞋型的消费者。该人群为媒体与产品语境推定，不是人口统计实测。</dd><dt>推动来源</dt><dd>Chloé S/S 2026是最直接的产品信号；Arielle Charnas、Ella Richards、Maggie Rogers，以及后续Kylie Jenner等穿着构成放大链。<a class="source-link" href="https://www.marieclaire.com/fashion/celebrity-style/jelly-shoe-sandal-trend-kylie-jenner/" target="_blank" rel="noopener">Marie Claire</a></dd><dt>对应词</dt><dd>jelly mules、jelly mules for women、jelly kitten heels。</dd></dl></article>
+        <article class="research-card"><h3>Mary Jane / Ballet / Mesh flats</h3><dl><dt>使用场景</dt><dd>夏季城市通勤、日常裙装、牛仔裤与度假穿搭；消费者寻找的是比传统凉鞋更包脚、但视觉更轻透的平底鞋。</dd><dt>推定人群</dt><dd>受balletcore、mesh flats和Mary Jane复兴影响的Gen Z及年轻千禧女性；同时吸引对1980—2000年代jelly鞋有童年记忆的人群。</dd><dt>推动来源</dt><dd>The Row把jelly ballerina带入高端时装；Alaïa mesh Mary Janes与更广泛的mesh-flat趋势提供相邻审美，Amazon、Zara等低价版本扩大可得性。<a class="source-link" href="https://www.glamour.com/story/mesh-ballet-flats-trend" target="_blank" rel="noopener">Glamour</a></dd><dt>对应词</dt><dd>jelly mary janes、mary jane jelly flats、jelly ballet flats、jelly mesh flats及women变体。</dd></dl></article>
+        <article class="research-card"><h3>Fisherman / Caged</h3><dl><dt>使用场景</dt><dd>海边、泳池、夏季步行及“城市穿水鞋”的反常规造型；笼状包裹结构同时提供复古童鞋与实用水鞋联想。</dd><dt>推定人群</dt><dd>偏好Y2K/怀旧、度假穿搭和“wrong shoe”搭配的年轻消费者；亦覆盖寻找可冲洗夏季鞋的功能型人群。</dd><dt>推动来源</dt><dd>The Row的编织jelly flats和Taylor Swift早期的粉色fisherman sandals为2024提供曝光；2026时尚媒体与创作者继续把fisherman列为核心细分。<a class="source-link" href="https://www.whowhatwear.com/fashion/shoes/jelly-shoe-trends-2026" target="_blank" rel="noopener">Who What Wear</a></dd><dt>对应词</dt><dd>jelly fisherman sandals及其women变体；2026新增jelly clogs可视为相邻包裹型需求。</dd></dl></article>
+        <article class="research-card"><h3>Clear / Brown / Slip-on</h3><dl><dt>使用场景</dt><dd>clear强调透明“Cinderella”与夏季视觉；brown/tortoise把塑料材质中性化，适配牛仔与极简服装；slip-on连接泳池、海滩和快速穿脱。</dd><dt>推定人群</dt><dd>clear偏年轻、社媒与派对审美；brown/tortoise偏希望把争议材质穿得更成熟的消费者；slip-on更接近泳装与度假购买者。</dd><dt>推动来源</dt><dd>Chloé透明与棕灰色TPU款强化高级化表达；SKIMS Jelly Shoe把透明一脚蹬放进SWIM产品体系。两者更可能是品类放大器，而非每个长尾词的唯一因果来源。</dd><dt>对应词</dt><dd>clear jelly flats、brown jelly flats、jelly slip on shoes women。</dd></dl></article>
+      </div>
+      <div class="callout" style="margin-top:18px"><b>因果判断：</b>外部资料可以证明产品发布、秀场曝光、名人穿着与搜索增长在时间上高度吻合，但不能仅凭公开资料证明某一个品牌或名人是唯一原因。报告将其定义为“高可信推动因素”，而不是单一因果归因。</div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Keyword-level demand map</div><h2>每个已验证细分词对应的真实需求解释</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>细分词</th><th>需求场景</th><th>推定核心人群</th><th>主要外部来源</th></tr></thead>
+        <tbody>
+          <tr><td>jelly kitten heels</td><td>夏季派对、城市轻正式、度假晚餐；透明低跟“玻璃鞋”</td><td>名人穿搭追随者、时尚型年轻女性</td><td>Chloé S/S25—S/S26秀场与名人放大</td></tr>
+          <tr><td>jelly mules</td><td>快速穿脱、牛仔裤/长裙、城市到度假的时装鞋</td><td>高时尚敏感、接受争议鞋型的女性</td><td>Chloé S/S26 Jelly Mules及创作者穿着</td></tr>
+          <tr><td>jelly mules for women</td><td>与jelly mules相同，但搜索意图更明确地锁定成人女鞋</td><td>成人女性购买者</td><td>Chloé产品与大众零售跟进</td></tr>
+          <tr><td>jelly fisherman sandals</td><td>海边、泳池、夏季步行、城市wrong-shoe造型</td><td>Y2K/怀旧消费者与度假功能型买家</td><td>The Row成人化叙事、2026编辑与创作者扩散</td></tr>
+          <tr><td>mary jane jelly flats</td><td>包脚平底、裙装/通勤、复古少女感</td><td>balletcore与Mary Jane趋势受众</td><td>Alaïa mesh Mary Jane与The Row jelly-flat审美交叉</td></tr>
+          <tr><td>jelly mary janes</td><td>夏季城市穿搭、复古制服感、平底日常</td><td>Gen Z及年轻千禧女性</td><td>Mary Jane复兴叠加jelly材质复兴</td></tr>
+          <tr><td>jelly mary janes for women</td><td>明确成人女鞋意图，弱化传统儿童jelly鞋联想</td><td>成年女性日常/通勤购买者</td><td>高端Mary Jane与大众版本共同扩散</td></tr>
+          <tr><td>brown jelly flats</td><td>中性色城市穿搭，搭配牛仔、亚麻与极简服装</td><td>希望把塑料鞋穿得更成熟的人群</td><td>Chloé棕灰透明款及tortoise/brown配色扩散</td></tr>
+          <tr><td>jelly slip on shoes women</td><td>泳池、海滩、旅行与快速穿脱</td><td>度假/泳装消费者及便利导向买家</td><td>SKIMS SWIM Jelly Shoe与大众一脚蹬供给</td></tr>
+          <tr><td>clear jelly flats</td><td>透明Cinderella视觉、派对与夏季轻盈穿搭</td><td>社媒审美、年轻时尚消费者</td><td>Chloé透明TPU与名人穿着</td></tr>
+          <tr><td>jelly ballet flats</td><td>夏季城市平底鞋、裙装、牛仔裤和度假</td><td>balletcore、平底鞋与怀旧趋势受众</td><td>The Row Mara、Ancient Greek Sandals及低价替代款</td></tr>
+          <tr><td>jelly mesh flats</td><td>视觉轻透的城市平底鞋，强调透气感与网格外观</td><td>mesh-flat趋势追随者</td><td>Alaïa mesh flats与The Row编织jelly审美叠加</td></tr>
+          <tr><td>jelly ballet flats for women</td><td>成人女鞋、夏季通勤和日常平底替代</td><td>成年女性及平底鞋高频使用者</td><td>The Row高端示范、时尚媒体与大众零售扩散</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-kicker">Priority</div><h2>下一步竞品分析优先级</h2>
+      <div class="ranking">
+        <div class="rank-item"><div><b>jelly mules</b><br><span>规模和增长倍数兼具，且已形成多个相关表达。</span></div><em>优先级最高</em></div>
+        <div class="rank-item"><div><b>jelly mary janes</b><br><span>相关词数量最多，需求簇证据最强。</span></div><em>优先级最高</em></div>
+        <div class="rank-item"><div><b>jelly ballet / mesh flats</b><br><span>2024→2025→2026连续增长，曲线验证最完整。</span></div><em>高优先级</em></div>
+        <div class="rank-item"><div><b>jelly kitten heels</b><br><span>增长倍数最高，但仍需验证高峰持续性。</span></div><em>高增长观察</em></div>
+      </div>
+      <div class="callout" style="margin-top:22px"><b>报告边界：</b>当前名单是从Sif头部ASIN流量词中筛出并经历史曲线验证的“已证实集合”，足以回答“是否存在增量细分市场”，但不代表词根下全部细分词的穷尽清单。</div>
+    </section>
+
+    <section class="method">
+      <b>数据口径与方法</b>
+      <ul>
+        <li>候选词来源：Sif MCP <code>market_get_asin_keyword_signals</code>，8个头部及最新点击ASIN，每个最多返回300个流量词。</li>
+        <li>曲线验证：Sif MCP <code>market_get_keyword_history</code>，US站、week粒度，对40个候选细分词逐词回查。</li>
+        <li>月度曲线：将同一自然月内的周度搜索量取算术平均，分别叠加2024、2025、2026；缺少非零返回值的月份留空。</li>
+        <li>“首次出现”：Sif返回的ABA周度搜索量序列中第一次出现非零值的年份。</li>
+        <li>“年度峰值”：该自然年内最高一周的ABA搜索量。2026为截至2026-07-12的年内数据。</li>
+        <li>站外需求研究：综合秀场/产品页面、主流时尚媒体和公开名人穿着报道。人群画像为基于这些语境的分析推定，不等同于Amazon后台人口统计数据。</li>
+      </ul>
+    </section>
+    <footer class="footer"><span>Jelly Shoes 增量市场机会挖掘报告</span><span>V1.1 · 2026-07-26</span></footer>
+  </main>
+</article>
+<script>
+  const curves=[
+    {k:'jelly kitten heels',m:{'2025-05':149,'2025-06':155,'2025-07':207,'2025-08':131,'2026-02':257,'2026-03':917,'2026-04':2154,'2026-05':3652,'2026-06':4937,'2026-07':3949}},
+    {k:'jelly mules',m:{'2025-03':233,'2025-04':372,'2025-05':610,'2025-06':601,'2025-07':437,'2025-08':258,'2025-09':242,'2025-10':134,'2026-01':199,'2026-02':433,'2026-03':2220,'2026-04':3125,'2026-05':4892,'2026-06':5088,'2026-07':3907}},
+    {k:'jelly mules for women',m:{'2025-02':156,'2025-03':416,'2025-04':519,'2025-05':659,'2025-06':848,'2025-07':671,'2025-08':403,'2025-09':184,'2025-10':136,'2026-01':150,'2026-02':543,'2026-03':3194,'2026-04':4777,'2026-05':6113,'2026-06':5938,'2026-07':4421}},
+    {k:'jelly fisherman sandals',m:{'2025-05':131,'2025-06':136,'2026-03':131,'2026-04':149,'2026-05':429,'2026-06':934,'2026-07':831}},
+    {k:'mary jane jelly flats',m:{'2025-07':161,'2026-03':437,'2026-04':572,'2026-05':598,'2026-06':648,'2026-07':821}},
+    {k:'jelly mary janes',m:{'2025-06':131,'2025-07':181,'2025-08':164,'2025-09':141,'2026-02':183,'2026-03':440,'2026-04':699,'2026-05':976,'2026-06':924,'2026-07':757}},
+    {k:'jelly mary janes for women',m:{'2025-03':199,'2025-04':204,'2025-05':353,'2025-06':436,'2025-07':386,'2025-08':256,'2025-09':190,'2026-02':389,'2026-03':1267,'2026-04':1607,'2026-05':1960,'2026-06':2064,'2026-07':1987}},
+    {k:'brown jelly flats',note:'2025活跃在9—10月；2026提前至2—7月，暂无同月基线',m:{'2025-09':185,'2025-10':171,'2026-02':149,'2026-03':365,'2026-04':997,'2026-05':1160,'2026-06':767,'2026-07':523}},
+    {k:'jelly slip on shoes women',m:{'2025-04':191,'2025-05':181,'2025-06':206,'2025-07':158,'2025-08':146,'2026-03':368,'2026-04':592,'2026-05':635,'2026-06':832,'2026-07':810}},
+    {k:'clear jelly flats',m:{'2025-04':176,'2025-05':246,'2025-06':423,'2025-07':443,'2025-08':343,'2025-09':248,'2025-10':175,'2026-01':126,'2026-02':386,'2026-03':896,'2026-04':1272,'2026-05':1416,'2026-06':1194,'2026-07':742}},
+    {k:'jelly ballet flats',m:{'2024-06':132,'2024-07':147,'2025-03':131,'2025-04':198,'2025-05':366,'2025-06':340,'2025-07':361,'2025-08':219,'2025-09':170,'2025-10':200,'2026-01':166,'2026-02':245,'2026-03':611,'2026-04':691,'2026-05':1098,'2026-06':1033,'2026-07':833}},
+    {k:'jelly mesh flats',m:{'2024-06':136,'2024-07':151,'2025-04':174,'2025-05':235,'2025-06':200,'2025-07':199,'2025-08':184,'2025-09':207,'2026-02':197,'2026-03':348,'2026-04':494,'2026-05':699,'2026-06':727,'2026-07':462}},
+    {k:'jelly ballet flats for women',m:{'2024-04':126,'2024-05':204,'2024-06':298,'2024-07':391,'2024-08':265,'2024-09':161,'2025-02':151,'2025-03':332,'2025-04':632,'2025-05':974,'2025-06':1048,'2025-07':815,'2025-08':457,'2025-09':163,'2026-02':341,'2026-03':1102,'2026-04':1491,'2026-05':1761,'2026-06':2204,'2026-07':1588}}
+  ];
+  const grid=document.getElementById('curve-grid'),ns='http://www.w3.org/2000/svg',fmt=n=>n==null?'—':n.toLocaleString('en-US');
+  const years=[2024,2025,2026],colors={2024:'#aab4c3',2025:'#0e7490',2026:'#2563eb'};
+  curves.forEach(s=>{
+    const box=document.createElement('div');box.className='curve';
+    const h=document.createElement('h3');h.textContent=s.k;box.appendChild(h);
+    const pairs=[];for(let m=1;m<=7;m++){const mm=String(m).padStart(2,'0'),a=s.m[`2025-${mm}`],b=s.m[`2026-${mm}`];if(a&&b)pairs.push(b/a)}
+    const r=document.createElement('div');r.className='ratio';r.textContent=s.note||(pairs.length?`所有可比月份同比增长 ${Math.min(...pairs).toFixed(1)}—${Math.max(...pairs).toFixed(1)}×`:'2026新出现，暂无同月基线');box.appendChild(r);
+    const svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 500 226');svg.setAttribute('role','img');svg.setAttribute('aria-label',`${s.k} 2024至2026月均周搜索量同比曲线`);
+    const vals=Object.values(s.m),max=Math.max(...vals)*1.12,x=m=>42+(m-1)*40,y=v=>184-(v/max)*150;
+    const add=(tag,a)=>{const e=document.createElementNS(ns,tag);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));svg.appendChild(e);return e};
+    [0,.5,1].forEach(p=>{const gy=184-p*150;add('line',{class:'gridline',x1:42,y1:gy,x2:482,y2:gy});const t=add('text',{x:37,y:gy+3,'text-anchor':'end'});t.textContent=fmt(Math.round(max*p))});
+    for(let m=1;m<=12;m++){if(m===1||m%2===0){const t=add('text',{x:x(m),y:207,'text-anchor':'middle'});t.textContent=m+'月'}}
+    years.forEach(yr=>{let d='',drawing=false;for(let m=1;m<=12;m++){const v=s.m[`${yr}-${String(m).padStart(2,'0')}`];if(v==null){drawing=false;continue}d+=(drawing?'L':'M')+x(m)+','+y(v)+' ';drawing=true}if(d)add('path',{class:'line',d,stroke:colors[yr]});for(let m=1;m<=12;m++){const v=s.m[`${yr}-${String(m).padStart(2,'0')}`];if(v!=null)add('circle',{class:'dot',cx:x(m),cy:y(v),r:3,fill:colors[yr]})}});
+    const cursor=add('line',{x1:42,y1:28,x2:42,y2:184,stroke:'#637083','stroke-width':1,'stroke-dasharray':'3 3',visibility:'hidden'});
+    const hit=add('rect',{x:42,y:24,width:440,height:164,fill:'transparent'});
+    const read=document.createElement('div');read.className='readout';read.textContent='移动鼠标查看各月数值';
+    hit.addEventListener('mousemove',e=>{const rect=svg.getBoundingClientRect(),sx=(e.clientX-rect.left)*500/rect.width,m=Math.max(1,Math.min(12,Math.round((sx-42)/40)+1));cursor.setAttribute('x1',x(m));cursor.setAttribute('x2',x(m));cursor.setAttribute('visibility','visible');read.textContent=`${m}月｜2024 ${fmt(s.m[`2024-${String(m).padStart(2,'0')}`])}｜2025 ${fmt(s.m[`2025-${String(m).padStart(2,'0')}`])}｜2026 ${fmt(s.m[`2026-${String(m).padStart(2,'0')}`])}`});
+    hit.addEventListener('mouseleave',()=>{cursor.setAttribute('visibility','hidden');read.textContent='移动鼠标查看各月数值'});
+    box.append(svg,read);grid.appendChild(box);
+  });
+</script>
+</body>
+</html>
