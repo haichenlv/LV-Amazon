@@ -1,7 +1,7 @@
 export interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
-  FILES: R2Bucket;
+  FILES: KVNamespace;
   APP_TOKEN: string;
   PUBLIC_BASE_URL: string;
   BG_REMOVAL_ENDPOINT?: string;
