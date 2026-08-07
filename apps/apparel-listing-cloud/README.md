@@ -9,7 +9,7 @@
 - 用户提供的白底图直接采用，不打开、不校验；按“产品简称 + 颜色”文件名配对。
 - 原图下载后重新托管，Main / Swatch / Other 按最新规则分流。
 - 没有白底图时调用可配置的抠图服务；未配置时给出明确错误。
-- 使用私有 R2 保存 XY 模板和生成文件，公开 R2 路径仅用于 Amazon 图片。
+- 使用 Cloudflare KV 保存 XY 模板、生成文件和 Amazon 图片；私有/公开路径由 Worker 严格分流。
 - D1 保存任务、产品、校验结果和下载记录。
 - 固化 SHIRT、尺码、报价、库存物流、Compliance 空值、Shipping Template 等规则。
 - 网页端上传、进度/错误查看、XLSM 下载、规则查看和 XY 模板更新。
@@ -18,7 +18,7 @@
 
 ```bash
 npx wrangler d1 create amazon-apparel-listing
-npx wrangler r2 bucket create amazon-apparel-listing-files
+npx wrangler kv namespace create FILES
 ```
 
 把 D1 返回的 `database_id` 写入 `wrangler.jsonc`，然后：
@@ -32,7 +32,7 @@ npx wrangler secret put BG_REMOVAL_API_KEY
 npm run deploy
 ```
 
-`APP_TOKEN`、图床密码、第三方 API Key 和 XY 原始模板均不得提交到公开仓库。
+`APP_TOKEN`、图床密码、第三方 API Key 和 XY 原始模板均不得提交到公开仓库。若账户以后启用 R2，可再把文件存储从 KV 平滑迁移到 R2。
 
 ## 白底图命名
 
