@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>亚马逊服装上架工作台</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">LV</span><div><strong>Listing Studio</strong><small>Amazon US · Apparel</small></div></div>
+      <nav>
+        <button class="nav-item active" data-view="workbench"><span>◫</span>上架工作台</button>
+        <button class="nav-item" data-view="jobs"><span>⌁</span>任务记录</button>
+        <button class="nav-item" data-view="rules"><span>✓</span>规则库</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span>系统设置</button>
+      </nav>
+      <div class="sidebar-note"><span class="pulse"></span><div><strong>规则版本 2026.08</strong><small>XY 模板 · SHIRT 类目</small></div></div>
+    </aside>
+
+    <main>
+      <header class="topbar"><div><p class="eyebrow">CLOUD WORKSPACE</p><h1 id="page-title">上架工作台</h1></div><div class="top-actions"><span id="template-pill" class="pill warning">未检查 XY 模板</span><button id="refresh" class="icon-button" aria-label="刷新">↻</button></div></header>
+
+      <section id="view-workbench" class="view active">
+        <div class="hero">
+          <div><span class="kicker">批量生成 · 一行一个产品</span><h2>把繁琐的模板填写，<br><em>变成一次上传。</em></h2><p>读取产品信息、匹配白底图、迁移原图、生成父子变体，并在交付前执行固定规则校验。</p></div>
+          <div class="hero-metric"><span>当前标准</span><strong>SHIRT</strong><small>美国站服装模板</small></div>
+        </div>
+
+        <div class="grid two">
+          <form id="job-form" class="card upload-card">
+            <div class="card-heading"><div><span class="step">01</span><h3>创建上架任务</h3></div><span class="tag">支持多产品</span></div>
+            <label class="dropzone" id="workbook-drop"><input id="workbook" name="workbook" type="file" accept=".xlsx,.xls" required /><span class="drop-icon">⇧</span><strong>选择产品信息 Excel</strong><small>使用现有 37 列批量信息表；读取几行，就生成几份文件</small><span class="file-name" id="workbook-name">尚未选择</span></label>
+            <div class="divider"><span>以及</span></div>
+            <label class="dropzone compact"><input id="white-images" name="white_images" type="file" accept="image/*" multiple /><span class="drop-icon">▧</span><strong>选择已抠好的白底图</strong><small>直接使用，不打开、不校验。文件名需包含“产品简称 + 颜色”</small><span class="file-name" id="images-name">可不选；缺图时调用自动抠图服务</span></label>
+            <div class="consent"><span>✓</span><p>我提供的白底图默认符合亚马逊主图要求，系统无需再次检查。</p></div>
+            <button class="primary" type="submit"><span>开始生成上架文件</span><b>→</b></button>
+            <p id="job-message" class="form-message"></p>
+          </form>
+
+          <div class="card process-card">
+            <div class="card-heading"><div><span class="step">02</span><h3>自动处理流程</h3></div><span class="tag green">已固化</span></div>
+            <ol class="process-list">
+              <li><span>1</span><div><strong>解析批量产品信息</strong><small>标题、价格、颜色、尺码和自定义文案</small></div></li>
+              <li><span>2</span><div><strong>迁移图片到云端</strong><small>Main 使用白底图；Swatch / Other 使用原图</small></div></li>
+              <li><span>3</span><div><strong>生成父子变体矩阵</strong><small>默认 S–5XL，颜色 × 尺码自动展开</small></div></li>
+              <li><span>4</span><div><strong>写入 XY 原始 XLSM</strong><small>保留宏、账户授权信息与模板结构</small></div></li>
+              <li><span>5</span><div><strong>逐项校验并交付</strong><small>必填项、物流、合规空值、SKU 与 MPN 唯一性</small></div></li>
+            </ol>
+            <div class="rule-strip"><span>父体 Shipping 空</span><span>子体 6.99</span><span>List Price ×2</span></div>
+          </div>
+        </div>
+
+        <div class="section-title"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>最近任务</h2></div><button class="text-button" data-go="jobs">查看全部 →</button></div>
+        <div id="recent-jobs" class="job-list empty-state"><span>◎</span><p>还没有云端任务</p><small>上传第一份产品信息表后，进度会显示在这里。</small></div>
+      </section>
+
+      <section id="view-jobs" class="view">
+        <div class="section-title"><div><p class="eyebrow">TASK HISTORY</p><h2>任务记录</h2></div><button id="jobs-refresh" class="secondary">刷新状态</button></div>
+        <div id="all-jobs" class="job-list empty-state"><span>◎</span><p>还没有任务</p></div>
+      </section>
+
+      <section id="view-rules" class="view">
+        <div class="section-title"><div><p class="eyebrow">LOCKED STANDARD</p><h2>已固化规则库</h2></div><span class="pill success">生产规则</span></div>
+        <div class="rule-grid" id="rule-grid"></div>
+      </section>
+
+      <section id="view-settings" class="view">
+        <div class="section-title"><div><p class="eyebrow">SYSTEM SETTINGS</p><h2>系统设置</h2></div></div>
+        <div class="grid two settings-grid">
+          <form id="template-form" class="card">
+            <div class="card-heading"><div><span class="step">A</span><h3>XY 原始模板</h3></div></div>
+            <p class="muted">模板仅保存到私有云存储，不进入公开 GitHub 仓库。更新亚马逊模板时在此替换。</p>
+            <label class="dropzone compact"><input id="template-file" name="template" type="file" accept=".xlsm" required /><span class="drop-icon">▤</span><strong>选择 .xlsm 文件</strong><small id="template-meta">尚未上传模板</small></label>
+            <button class="primary small" type="submit">上传并设为当前模板</button>
+            <p id="template-message" class="form-message"></p>
+          </form>
+          <div class="card">
+            <div class="card-heading"><div><span class="step">B</span><h3>图片与安全</h3></div></div>
+            <dl class="status-list"><div><dt>白底图规则</dt><dd class="ok">直接采用，不校验</dd></div><div><dt>公开访问</dt><dd>仅 Amazon 图片链接</dd></div><div><dt>XY 模板 / 输出</dt><dd>私有下载</dd></div><div><dt>自动抠图接口</dt><dd id="bg-status">检测中</dd></div><div><dt>访问保护</dt><dd class="ok">令牌登录</dd></div></dl>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="login" class="login-overlay">
+    <form id="login-form" class="login-card"><span class="brand-mark large">LV</span><p class="eyebrow">PRIVATE WORKSPACE</p><h2>进入上架工作台</h2><p>请输入云端工作台访问密码。</p><input id="token" type="password" autocomplete="current-password" placeholder="访问密码" required /><button class="primary" type="submit">登录</button><small id="login-error"></small></form>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
