@@ -1,0 +1,36 @@
+CREATE TABLE IF NOT EXISTS app_settings (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS jobs (
+  id TEXT PRIMARY KEY,
+  status TEXT NOT NULL,
+  source_name TEXT NOT NULL,
+  product_count INTEGER NOT NULL DEFAULT 0,
+  completed_count INTEGER NOT NULL DEFAULT 0,
+  error TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS products (
+  id TEXT PRIMARY KEY,
+  job_id TEXT NOT NULL,
+  row_number INTEGER NOT NULL,
+  short_name TEXT NOT NULL,
+  listing_date TEXT NOT NULL,
+  sku_suffix TEXT NOT NULL,
+  status TEXT NOT NULL,
+  color_count INTEGER NOT NULL DEFAULT 0,
+  variant_count INTEGER NOT NULL DEFAULT 0,
+  output_key TEXT,
+  validation_json TEXT,
+  error TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (job_id) REFERENCES jobs(id) ON DELETE CASCADE
+);
+
+CREATE INDEX IF NOT EXISTS idx_products_job_id ON products(job_id);
