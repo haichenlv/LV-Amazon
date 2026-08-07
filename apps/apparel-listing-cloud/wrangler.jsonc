@@ -4,6 +4,8 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-08-05",
   "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
@@ -15,17 +17,17 @@
     {
       "binding": "DB",
       "database_name": "amazon-apparel-listing",
-      "database_id": "REPLACE_AFTER_PROVISIONING",
+      "database_id": "6b44b6c7-c631-4162-9992-eeb1e6c18c65",
       "migrations_dir": "migrations"
     }
   ],
-  "r2_buckets": [
+  "kv_namespaces": [
     {
       "binding": "FILES",
-      "bucket_name": "amazon-apparel-listing-files"
+      "id": "0902c206f25c4269b04ee9d2bbadf5b1"
     }
   ],
   "vars": {
-    "PUBLIC_BASE_URL": "http://localhost:8787"
+    "PUBLIC_BASE_URL": "https://amazon-apparel-listing-cloud.haichenlv-amazon.workers.dev"
   }
 }
