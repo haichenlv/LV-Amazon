@@ -47,7 +47,7 @@ async function putRemoteOriginal(env: Env, jobId: string, product: ProductInput,
   const contentType = response.headers.get("content-type")?.split(";")[0] || "image/jpeg";
   const extension = contentType.includes("png") ? "png" : contentType.includes("webp") ? "webp" : "jpg";
   const key = `public/${jobId}/${slug(product.shortName)}/${slug(color)}-original.${extension}`;
-  await env.FILES.put(key, bytes, { httpMetadata: { contentType, cacheControl: "public, max-age=31536000, immutable" } });
+  await env.FILES.put(key, bytes, { metadata: { contentType, cacheControl: "public, max-age=31536000, immutable" } });
   return { key, bytes, contentType };
 }
 
@@ -77,7 +77,7 @@ async function prepareImages(env: Env, jobId: string, product: ProductInput, whi
       mainBytes = processed.bytes; mainType = processed.contentType; extension = mainType.includes("png") ? "png" : "jpg";
     }
     const mainKey = `public/${jobId}/${slug(product.shortName)}/${slug(color.name)}-main.${extension}`;
-    await env.FILES.put(mainKey, mainBytes, { httpMetadata: { contentType: mainType, cacheControl: "public, max-age=31536000, immutable" } });
+    await env.FILES.put(mainKey, mainBytes, { metadata: { contentType: mainType, cacheControl: "public, max-age=31536000, immutable" } });
     const base = env.PUBLIC_BASE_URL.replace(/\/$/, "");
     return [color.name, { main: `${base}/media/${mainKey}`, original: `${base}/media/${original.key}` }] as const;
   }));
@@ -89,9 +89,8 @@ async function updateJob(env: Env, id: string, status: string, completed: number
 }
 
 async function processBatch(env: Env, jobId: string, products: ProductInput[], whiteFiles: File[]) {
-  const template = await env.FILES.get(TEMPLATE_KEY);
-  if (!template) throw new Error("尚未上传 XY 原始 XLSM 模板，请先到系统设置上传");
-  const templateBytes = await template.arrayBuffer();
+  const templateBytes = await env.FILES.get(TEMPLATE_KEY, "arrayBuffer");
+  if (!templateBytes) throw new Error("尚未上传 XY 原始 XLSM 模板，请先到系统设置上传");
   let completed = 0;
   for (const product of products) {
     const productId = crypto.randomUUID();
@@ -102,7 +101,7 @@ async function processBatch(env: Env, jobId: string, products: ProductInput[], w
       const result = createListingXlsm(templateBytes.slice(0), product, images);
       const fileName = `${safeName(product.shortName)}_${product.listingDate}_Amazon_US_SHIRT_XY最终上传.xlsm`;
       const outputKey = `private/outputs/${jobId}/${fileName}`;
-      await env.FILES.put(outputKey, result.bytes, { httpMetadata: { contentType: "application/vnd.ms-excel.sheet.macroEnabled.12", contentDisposition: `attachment; filename="${encodeURIComponent(fileName)}"` } });
+      await env.FILES.put(outputKey, result.bytes, { metadata: { contentType: "application/vnd.ms-excel.sheet.macroEnabled.12", contentDisposition: `attachment; filename="${encodeURIComponent(fileName)}"` } });
       await env.DB.prepare("UPDATE products SET status='COMPLETED', output_key=?, validation_json=?, updated_at=CURRENT_TIMESTAMP WHERE id=?")
         .bind(outputKey, JSON.stringify(result.validation), productId).run();
       completed += 1; await updateJob(env, jobId, completed === products.length ? "COMPLETED" : "PROCESSING", completed);
@@ -144,7 +143,7 @@ async function listJobs(env: Env): Promise<Response> {
 async function uploadTemplate(request: Request, env: Env): Promise<Response> {
   const form = await request.formData(); const file = form.get("template");
   if (!(file instanceof File) || !/\.xlsm$/i.test(file.name)) return json({ error: "请选择 XY 原始 .xlsm 模板" }, 400);
-  await env.FILES.put(TEMPLATE_KEY, await file.arrayBuffer(), { customMetadata: { originalName: file.name, uploadedAt: new Date().toISOString() }, httpMetadata: { contentType: "application/vnd.ms-excel.sheet.macroEnabled.12" } });
+  await env.FILES.put(TEMPLATE_KEY, await file.arrayBuffer(), { metadata: { contentType: "application/vnd.ms-excel.sheet.macroEnabled.12", originalName: file.name, uploadedAt: new Date().toISOString() } });
   await env.DB.prepare("INSERT INTO app_settings (key,value,updated_at) VALUES ('template_meta',?,CURRENT_TIMESTAMP) ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=CURRENT_TIMESTAMP").bind(JSON.stringify({ name: file.name, size: file.size, uploadedAt: new Date().toISOString() })).run();
   return json({ ok: true, name: file.name, size: file.size });
 }
@@ -156,10 +155,14 @@ async function getSettings(env: Env): Promise<Response> {
 
 async function serveObject(env: Env, key: string, download: boolean): Promise<Response> {
   if (!key.startsWith(download ? "private/outputs/" : "public/")) return new Response("Not found", { status: 404 });
-  const object = await env.FILES.get(key); if (!object) return new Response("Not found", { status: 404 });
-  const headers = new Headers(); object.writeHttpMetadata(headers); headers.set("etag", object.httpEtag);
+  const object = await env.FILES.getWithMetadata<{ contentType?: string; cacheControl?: string; contentDisposition?: string }>(key, "stream");
+  if (!object.value) return new Response("Not found", { status: 404 });
+  const headers = new Headers();
+  if (object.metadata?.contentType) headers.set("content-type", object.metadata.contentType);
+  if (object.metadata?.cacheControl) headers.set("cache-control", object.metadata.cacheControl);
+  if (object.metadata?.contentDisposition) headers.set("content-disposition", object.metadata.contentDisposition);
   if (!download) headers.set("cache-control", "public, max-age=31536000, immutable");
-  return new Response(object.body, { headers });
+  return new Response(object.value, { headers });
 }
 
 export default {
